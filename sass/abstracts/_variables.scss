@@ -2,19 +2,14 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+/*$text-font-stack: 'cooper hewitt medium', 'Arial', sans-serif !default;*/
+$text-font-stack: 'Josefin Sans', sans-serif !default;
 
-/// Code (monospace) font family
+/*/// Code (monospace) font family
 /// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;*/
 
 
 
@@ -27,17 +22,48 @@ $text-color: rgb(34, 34, 34) !default;
 $brand-color: rgb(229, 0, 80) !default;
 
 /// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+/// @main-nav bar
+$light-grey: rgb(184, 184, 184) !default;
 
 /// Medium grey
-/// @type Color
+/// @text
 $mid-grey: rgb(153, 153, 153) !default;
 
 /// Dark grey
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
+/// Conservative Party
+/// Light blue
+$light-blue: rgb(128, 203, 251) !default;
+/// Medium blue
+$mid-blue: rgb(19, 131, 194) !default;
+/// Dark blue
+$dark-blue: rgb(12, 86, 128) !default;
+
+/// Green Party
+/// Light green
+$light-green: rgb(175, 233, 176) !default;
+/// Medium green
+$mid-green: rgb(35, 173, 36) !default;
+/// Dark green
+$dark-green: rgb(17, 94, 17) !default;
+
+/// New Democratic Party
+/// Light orange
+$light-orange: rgb(255, 174, 124) !default;
+/// Medium orange
+$mid-orange: rgb(242, 114, 43) !default;
+/// Dark orange
+$dark-orange: rgb(174, 70, 5) !default;
+
+/// Liberal Party
+/// Light red
+$light-red: rgb(255, 120, 134) !default;
+/// Medium red
+$mid-red: rgb(214, 2, 24) !default;
+/// Dark red
+$dark-red: rgb(135, 1, 15) !default;
 
 
 
@@ -65,6 +91,12 @@ $breakpoints: (
 
 
 /// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
