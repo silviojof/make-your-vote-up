@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="row colors">
-    <div class="medium-6 column">fhfghfghgh</div>
+    <div class="medium-6 column">SIlvio</div>
     <div class="medium-6 column">Right</div>
   </div>
 </body>
