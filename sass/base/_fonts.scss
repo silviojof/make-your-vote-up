@@ -1,3 +1,29 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+/*cooper hewitt bold*/
+@font-face {
+    font-family: 'cooper hewitt bold';
+    src: url('../fonts/cooperhewitt-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*cooper hewitt medium*/
+
+@font-face {
+    font-family: 'cooper hewitt medium';
+    src: url('../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cooperhewitt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*cooper hewitt light*/
+@font-face {
+    font-family: 'cooper hewitt light';
+    src: url('cooperhewitt-light-webfont.woff2') format('woff2'),
+         url('cooperhewitt-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
