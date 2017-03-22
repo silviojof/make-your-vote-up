@@ -1,4 +1,8 @@
 .comp-title {
+  height: calcRem(200px);
+  @media screen and (min-width: map-get($breakpoints, medium)) and (max-width: map-get($breakpoints, large)) {
+    background-color: blue !important;
+  }
   h2 {
     text-transform: uppercase;
     text-align: center;
