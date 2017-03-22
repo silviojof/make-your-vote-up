@@ -23,7 +23,7 @@
                     <div class="large-3 medium-6 small-12 columns">4</div>
                 </div>
             </div>
-
+            <a href="comparison.php">comparison link</a>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
