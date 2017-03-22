@@ -6,7 +6,7 @@
   "scripts": {
     "scss": "node-sass sass/styles.scss -o css",
     "autoprefixer": "postcss -u autoprefixer -r css/*",
-    "serve": "browser-sync start --proxy localhost/myvu --files css/*.css, js/*.js, *.html, *.php, partials/*.php --browser Chrome",
+    "serve": "browser-sync start --proxy localhost/make-your-vote-up --files css/*.css, js/*.js, *.html, *.php, partials/*.php --browser Chrome",
     "buildcss": "npm run scss && npm run autoprefixer",
     "watchcss": "onchange \"sass\" -- npm run buildcss",
     "watchall": "npm-run-all -p serve watchcss"
