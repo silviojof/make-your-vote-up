@@ -15,4 +15,8 @@ $(document).ready(function(){
     
     $('.window-h').css("height", $(document).height());
     
+    $(".party-nav").html($(".party-nav .party-box").sort(function(){
+        return Math.random()-0.5;
+    }));
+
 });
