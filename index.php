@@ -9,7 +9,7 @@
     </head>
     <body class="window-h">
         
-        <div class="row expanded">
+        <div class="row expanded collapse">
             
             <?php include('partials/main-nav.php'); ?>
             

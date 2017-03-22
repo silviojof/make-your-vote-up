@@ -1,4 +1,4 @@
-<nav class="row main-nav expanded">
+<nav class="row main-nav expanded collapse">
     <div class="large-6 medium-12 columns">
         <div class="row site-nav">
             <div class="medium-6 small-10 columns">logo</div>
