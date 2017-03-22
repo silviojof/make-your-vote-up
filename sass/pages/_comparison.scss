@@ -1,0 +1,122 @@
+.comp-title {
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &.comp-dark {
+    background-color: $dark-grey;
+    h2 {
+      color: $light-grey;
+    }
+  }
+  &.comp-light {
+    background-color: $light-grey;
+  }
+}
+
+.comp-topic, .comp-selectbox {
+  height: 15rem
+}
+
+
+.comp-topic {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  h2 {
+    color: $light-grey;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  background-image: url('../img/taxes.jpg');
+  background-size: cover;
+}
+
+
+/************ Start Select Box  *******************/
+
+.comp-selectbox {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-grey;
+}
+
+div.selectBox {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  text-align: left;
+  line-height: 50px;
+  clear: both;
+  color: rgb(114, 97, 97);
+}
+
+span.selected {
+   width: 270px;
+   text-indent: 10px;
+   border: 1px solid rgb(233, 233, 233);
+   border-right: none;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+   background: #f6f6f6;
+   overflow: hidden;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   text-transform: uppercase;
+   font-weight: bold;
+   background: #ffffff;
+   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
+   background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+span.selectArrow {
+  width: 50px;
+  border: 1px solid #60abf8;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  user-select: none;
+  background: $dark-grey;
+  color: #fff;
+}
+span.selectArrow,span.selected {
+  position: relative;
+  float: left;
+  height: 50px;
+  z-index: 1;
+}
+ul.selectOptions {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 320px;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+  background: rgb(250, 250, 250);
+  padding-top: 2px;
+  display: none;
+  margin: 0;
+  list-style: none inside none;
+  padding-left: 0;
+}
+li.selectOption {
+  display: block;
+  line-height: 20px;
+  padding: 5px 0 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  list-style: none;
+  margin: 0
+}
+li.selectOption:hover {
+  background: $mid-grey;
+}
+
+/************ End Select Box  *******************/

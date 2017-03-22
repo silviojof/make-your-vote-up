@@ -11,10 +11,11 @@
   <div class="row colors">
     <div class="medium-6 column">SIlvio</div>
     <div class="medium-6 column">Right Left</div>
-    
+
   </div>
   <div class="row colors2">
     <div class="medium-12 column">Using git is hard</div>
+    <a href="comparison.php">comparison</a>
   </div>
 
 </body>
