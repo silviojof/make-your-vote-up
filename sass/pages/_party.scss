@@ -1,0 +1,26 @@
+/************ party page  *******************/
+.hang-left{
+  float:left;
+  margin-left:-40%;
+  margin-top:5%;
+  width:65%;
+}
+.representative h2, p{
+  text-align:right;
+  font-weight:300;
+}
+.representative h2{
+  margin-top:20%;
+}
+.representative-party{
+  width:28%;
+}
+.keep-bottom{
+  position: fixed;
+  bottom:-10px;
+  left: 0;
+  z-index: 1000;
+}
+.party-page{
+  height:100vh;
+}
