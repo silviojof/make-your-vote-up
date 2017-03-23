@@ -1,5 +1,7 @@
 $(document).ready(function(){
     
+    //dropdown menu
+    
     $("#site-menu").click(function(){
         
         if ($(".site-menu").hasClass("dropdown")){
@@ -13,10 +15,31 @@ $(document).ready(function(){
         }
     });
     
-    //$('.window-h').css("height", $(document).height());
+    //
     
-    $(".party-nav").html($(".party-nav .party-box").sort(function(){
-        return Math.random()-0.5;
-    }));
+    $('.window-h').css("height", $(document).height());
+    
+    //randomnize
+    
+    var classes = ["conservative", "liberal", "green", "new-democratic"];
+    
+    for (var i = 0; i < classes.length; i += 1) {
+        
+        var randomNumber = Math.floor(Math.random()*classes.length);
+        
+        while ($(".party").hasClass(classes[randomNumber])) {
+            var randomNumber = Math.floor(Math.random()*classes.length);
+        }
+        
+        $(".party").filter(':eq('+i+'), :eq('+(i+4)+')').addClass(classes[randomNumber]);
+        $(".party").eq(i+4).attr('data-party', classes[randomNumber]);
+    }
+    
+    $(".conservative").text("conservative");
+    $(".liberal").text("liberal");
+    $(".green").text("green");
+    $(".new-democratic").text("new democratic");
+    
+    //
 
 });

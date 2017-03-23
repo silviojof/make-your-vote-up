@@ -22,18 +22,36 @@
     height:100vh;
 }
 
-[data-party="conservative"] {
+.conservative {
     background-color:$mid-blue;
 }
 
-[data-party="liberal"] {
+.liberal {
     background-color:$mid-red;
 }
 
-[data-party="green"] {
+.green {
     background-color:$mid-green;
 }
 
-[data-party="new democratic"] {
+.new-democratic {
     background-color:$mid-orange;
+}
+
+// Selectors to add the overlay images
+
+[data-party="conservative"] {
+    
+}
+
+[data-party="liberal"] {
+    
+}
+
+[data-party="green"] {
+    
+}
+
+[data-party="new democratic"] {
+    
 }

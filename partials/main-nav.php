@@ -11,10 +11,10 @@
     </div>
     <div class="large-6 columns medium-12 hide-for-small-only">
         <div class="row party-nav">
-            <div class="medium-3 columns party-box" data-party="conservative">conservative</div>
-            <div class="medium-3 columns party-box" data-party="new democratic">new democratic</div>
-            <div class="medium-3 columns party-box" data-party="liberal">liberal</div>
-            <div class="medium-3 columns party-box" data-party="green">green</div>
+            <div class="medium-3 columns party-box party"></div>
+            <div class="medium-3 columns party-box party"></div>
+            <div class="medium-3 columns party-box party"></div>
+            <div class="medium-3 columns party-box party"></div>
         </div>
     </div>
 </nav>
