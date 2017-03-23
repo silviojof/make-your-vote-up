@@ -9,6 +9,9 @@
   <title>wendibranch</title>
 </head>
 <body>
+  <?php
+    include('partials/main-nav.php');
+   ?>
   <div class="expanded row">
     <div class="small-12 medium-6 column comp-title comp-light">
         <h2>read each topic</h2>
