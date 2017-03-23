@@ -1,10 +1,33 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.main-nav {
+    color:white;
+}
+
+
 #site-menu {
     cursor:pointer;
 }
 
 .dropdown {
 
+
+
+    
 }
+
+.site-nav {
+    background-color:$light-grey;
+    padding:calcRem(40px);
+}
+
+.party-nav {
+    text-align:center;
+}
+
+.party-box {
+    padding:calcRem(40px);
+}
+

@@ -4,7 +4,7 @@
 
 //structure testing
 * {
-  // outline: 1px gainsboro solid;
+   outline: 1px gainsboro solid;
 }
 //
 
@@ -16,4 +16,42 @@
 }
 .colors2 {
   background-color: blue;
+}
+
+.window-h {
+    height:100vh;
+}
+
+.conservative {
+    background-color:$mid-blue;
+}
+
+.liberal {
+    background-color:$mid-red;
+}
+
+.green {
+    background-color:$mid-green;
+}
+
+.new-democratic {
+    background-color:$mid-orange;
+}
+
+// Selectors to add the overlay images
+
+[data-party="conservative"] {
+    
+}
+
+[data-party="liberal"] {
+    
+}
+
+[data-party="green"] {
+    
+}
+
+[data-party="new democratic"] {
+    
 }
