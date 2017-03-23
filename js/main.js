@@ -17,8 +17,6 @@ $(document).ready(function(){
     
     //
     
-    $('.window-h').css("height", $(document).height());
-    
     //randomnize
     
     var classes = ["conservative", "liberal", "green", "new-democratic"];

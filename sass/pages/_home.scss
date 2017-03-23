@@ -18,40 +18,27 @@
   background-color: blue;
 }
 
-.window-h {
-    height:100vh;
-}
-
-.conservative {
-    background-color:$mid-blue;
-}
-
-.liberal {
-    background-color:$mid-red;
-}
-
-.green {
-    background-color:$mid-green;
-}
-
-.new-democratic {
-    background-color:$mid-orange;
-}
-
 // Selectors to add the overlay images
 
+[data-party] {
+    background-color:transparent;
+    background-size:cover;
+    background-position:center;
+    height:500px;
+}
+
 [data-party="conservative"] {
-    
+    background-image:url("../../img/party-leaders-home/cons-homepage.jpg");
 }
 
 [data-party="liberal"] {
-    
+    background-image:url("../../img/party-leaders-home/liberal-homepage.jpg");
 }
 
 [data-party="green"] {
-    
+    background-image:url("../../img/party-leaders-home/green-homepage.jpg");
 }
 
 [data-party="new democratic"] {
-    
+    background-image:url("../../img/party-leaders-home/ndp-homepage.jpg");
 }
