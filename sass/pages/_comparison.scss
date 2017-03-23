@@ -1,22 +1,26 @@
 .comp-title {
-  height: calcRem(200px);
-  @media screen and (min-width: map-get($breakpoints, medium)) and (max-width: map-get($breakpoints, large)) {
-    background-color: blue !important;
-  }
+
   h2 {
     text-transform: uppercase;
     text-align: center;
+    font-family: 'cooper hewitt';
+    font-weight: 900;
+    @media screen and (min-width: map-get($breakpoints,large)) {
+      padding: 6rem 0;
+    }
   }
   &.comp-dark {
     background-color: $dark-grey;
     h2 {
       color: $light-grey;
-      font-family: 'cooper hewitt';
-      font-weight: 300;
     }
   }
   &.comp-light {
     background-color: $light-grey;
+    h2 {
+      color: $dark-grey;
+    }
+
   }
 }
 
@@ -56,7 +60,6 @@ div.selectBox {
   text-align: left;
   line-height: 50px;
   clear: both;
-  color: rgb(114, 97, 97);
 }
 
 span.selected {
@@ -73,6 +76,7 @@ span.selected {
    text-transform: uppercase;
    font-weight: bold;
    background: #ffffff;
+   color: $dark-grey;
    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(51%,#ededed), color-stop(100%,#ffffff));
    background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
@@ -87,7 +91,7 @@ span.selectArrow {
   font-size: 12px;
   user-select: none;
   background: $dark-grey;
-  color: #fff;
+  color: $light-grey !important;
 }
 span.selectArrow,span.selected {
   position: relative;
@@ -119,10 +123,201 @@ li.selectOption {
   font-weight: bold;
   font-family: arial, sans-serif;
   list-style: none;
-  margin: 0
+  margin: 0;
+  color: $dark-grey;
 }
 li.selectOption:hover {
   background: $mid-grey;
 }
 
 /************ End Select Box  *******************/
+
+/** Topics Menu **/
+.comp-img-box {
+  display: flex;
+  align-content: stretch;
+  .comp-img {
+    background-size: cover;
+    background-position: center center;
+    flex-basis: 11.11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #fff;
+    h5 {
+      text-transform: uppercase;
+      color: inherit;
+      text-align: center;
+      font-family: 'cooper hewitt';
+      font-weight: 600;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+/** Parties Box **/
+
+#comp-conservative {
+  .comp-header {
+    background-color: $mid-blue;
+    span {
+      color: $mid-blue;
+    }
+  }
+  .comp-body {
+    background-color: $light-blue;
+  }
+  .comp-icons {
+    span {
+      background-color: $mid-blue;
+      &:last-child {
+        background-color: transparent;
+        border: 1px solid $mid-blue;
+        i {
+          color: $mid-blue;
+        }
+      }
+    }
+    i {
+      color: $dark-blue;
+    }
+  }
+}
+
+#comp-green {
+  .comp-header {
+    background-color: $mid-green;
+    span {
+      color: $mid-green;
+    }
+  }
+  .comp-body {
+    background-color: $light-green;
+  }
+  .comp-icons {
+    span {
+      background-color: $mid-green;
+      &:last-child {
+        background-color: transparent;
+        border: 1px solid $mid-green;
+        i {
+          color: $mid-green;
+        }
+      }
+    }
+    i {
+      color: $dark-green;
+    }
+  }
+}
+
+#comp-democratic {
+  .comp-header {
+    background-color: $mid-orange;
+    span {
+      color: $mid-orange;
+    }
+  }
+  .comp-body {
+    background-color: $light-orange;
+  }
+  .comp-icons {
+    span {
+      background-color: $mid-orange;
+      &:last-child {
+        background-color: transparent;
+        border: 1px solid $mid-orange;
+        i {
+          color: $mid-orange;
+        }
+      }
+    }
+    i {
+      color: $dark-orange;
+    }
+  }
+}
+
+#comp-liberal {
+  .comp-header {
+    background-color: $mid-red;
+    span {
+      color: $mid-red;
+    }
+  }
+  .comp-body {
+    background-color: $light-red;
+  }
+  .comp-icons {
+    span {
+      background-color: $mid-red;
+      &:last-child {
+        background-color: transparent;
+        border: 1px solid $mid-red;
+        i {
+          color: $mid-red;
+        }
+      }
+    }
+    i {
+      color: $dark-red;
+    }
+  }
+}
+
+
+.comp-vote {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  line-height: 1.8;
+  background-color: #fff;
+  display: inline-block;
+  margin-left: 1.5rem;
+}
+
+.comp-header {
+  padding: 2rem 0;
+  h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+.comp-body {
+  padding: 0.8rem;
+}
+
+.comp-text {
+  color: $dark-grey;
+  font-size: calcRem(16px);
+  line-height: 2;
+}
+
+.comp-icons {
+  display: block;
+  text-align: center;
+  span {
+    margin: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    line-height: 3;
+    display: inline-block;
+    text-align: center;
+    i {
+      font-size: 2rem;
+    }
+  }
+}
+
+/** End of Parties Box **/
