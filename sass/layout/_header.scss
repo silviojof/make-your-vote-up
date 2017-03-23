@@ -1,15 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
 .main-nav {
     color:white;
 }
+
 
 #site-menu {
     cursor:pointer;
 }
 
 .dropdown {
+
+
+
     
 }
 
@@ -26,6 +31,7 @@
     padding:calcRem(40px);
 }
 
+<<<<<<< HEAD
 .conservative {
     background-color:$mid-blue;
 }
@@ -41,3 +47,5 @@
 .new-democratic {
     background-color:$mid-orange;
 }
+=======
+>>>>>>> 7306b7c588ebf78bd898f45b8c556a656d8e9cb8
