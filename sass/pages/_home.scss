@@ -4,7 +4,7 @@
 
 //structure testing
 * {
-  // outline: 1px gainsboro solid;
+   outline: 1px gainsboro solid;
 }
 //
 
@@ -16,6 +16,10 @@
 }
 .colors2 {
   background-color: blue;
+}
+
+.window-h {
+    height:100vh;
 }
 
 [data-party="conservative"] {

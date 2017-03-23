@@ -7,20 +7,20 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <title>wendibranch</title>
     </head>
-    <body class="window-h">
+    <body>
 
-        <div class="row expanded collapse">
+        <div class="row expanded collapse window-h">
 
             <?php include('partials/main-nav.php'); ?>
 
             <div class="large-6 medium-12 columns">title video background</div>
 
-            <div class="large-6 medium-12 columns parties-main">
+            <div class="large-6 medium-12 columns">
                 <div class="row parties">
-                    <div class="large-3 medium-6 small-12 columns">1</div>
-                    <div class="large-3 medium-6 small-12 columns">2</div>
-                    <div class="large-3 medium-6 small-12 columns">3</div>
-                    <div class="large-3 medium-6 small-12 columns">4</div>
+                    <div class="large-3 medium-6 small-12 columns party" data-party="conservative">conservative</div>
+                    <div class="large-3 medium-6 small-12 columns party" data-party="new democratic">new democratic</div>
+                    <div class="large-3 medium-6 small-12 columns party" data-party="liberal">liberal</div>
+                    <div class="large-3 medium-6 small-12 columns party" data-party="green">green</div>
                 </div>
             </div>
             <a href="comparison.php">comparison link</a>
