@@ -20,25 +20,52 @@
 
 // Selectors to add the overlay images
 
+@include breakpoint(medium up) {
+    
+    [data-party] {
+        background-color:transparent;
+        background-size:cover;
+        background-position:center;
+        height:500px;
+    }
+
+    [data-party="conservative"] {
+        background-image:url("./../img/party-leaders-home/cons-homepage.jpg");
+    }
+
+    [data-party="liberal"] {
+        background-image:url("./../img/party-leaders-home/liberal-homepage.jpg");
+    }
+
+    [data-party="green"] {
+        background-image:url("./../img/party-leaders-home/green-homepage.jpg");
+    }
+
+    [data-party="new-democratic"] {
+        background-image:url("./../img/party-leaders-home/ndp-homepage.jpg");
+    }
+    
+}
+
 [data-party] {
-    background-color:transparent;
-    background-size:cover;
-    background-position:center;
-    height:500px;
+    padding:calcRem(40px) 0;
+    text-align:center;
 }
 
-[data-party="conservative"] {
-    background-image:url("./../img/party-leaders-home/cons-homepage.jpg");
-}
+@include breakpoint(small only) {
+    [data-party="conservative"]:before {
+        content:"conservative";
+    }
 
-[data-party="liberal"] {
-    background-image:url("./../img/party-leaders-home/liberal-homepage.jpg");
-}
+    [data-party="liberal"]:before {
+        content:"liberal";
+    }
 
-[data-party="green"] {
-    background-image:url("./../img/party-leaders-home/green-homepage.jpg");
-}
+    [data-party="green"]:before {
+        content:"green";
+    }
 
-[data-party="new-democratic"] {
-    background-image:url("./../img/party-leaders-home/ndp-homepage.jpg");
+    [data-party="new-democratic"]:before {
+        content:"new democratic";
+    }
 }

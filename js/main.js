@@ -33,10 +33,10 @@ $(document).ready(function(){
         $(".party").eq(i+4).attr('data-party', classes[randomNumber]);
     }
     
-    $(".conservative").text("conservative");
-    $(".liberal").text("liberal");
-    $(".green").text("green");
-    $(".new-democratic").text("new democratic");
+    $(".conservative").eq(0).text("conservative");
+    $(".liberal").eq(0).text("liberal");
+    $(".green").eq(0).text("green");
+    $(".new-democratic").eq(0).text("new democratic");
     
     //
 

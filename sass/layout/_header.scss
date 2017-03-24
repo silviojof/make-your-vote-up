@@ -4,11 +4,11 @@
 
 .main-nav {
     color:white;
-    line-height:calcRem(100px);
 }
 
-.main-nav img {
+.site-nav img {
     max-height:calcRem(50px);
+    margin:calcRem(-20px);
 }
 
 
@@ -22,7 +22,7 @@
 
 .site-nav {
     background-color:$light-grey;
-
+    padding:calcRem(40px);
 }
 
 .party-nav {
@@ -30,9 +30,9 @@
 }
 
 .party-box {
-    
+    padding:calcRem(40px) 0;
+    text-align:center;
 }
-
 
 .conservative {
     background-color:$mid-blue;
@@ -48,4 +48,5 @@
 
 .new-democratic {
     background-color:$mid-orange;
+    white-space:nowrap;
 }
