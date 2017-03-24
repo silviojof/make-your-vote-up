@@ -4,6 +4,11 @@
 
 .main-nav {
     color:white;
+    line-height:calcRem(100px);
+}
+
+.main-nav img {
+    max-height:calcRem(50px);
 }
 
 
@@ -13,14 +18,11 @@
 
 .dropdown {
 
-
-
-
 }
 
 .site-nav {
     background-color:$light-grey;
-    padding:calcRem(40px);
+
 }
 
 .party-nav {
@@ -28,7 +30,7 @@
 }
 
 .party-box {
-    padding:calcRem(40px);
+    
 }
 
 
