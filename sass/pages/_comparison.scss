@@ -145,7 +145,17 @@ li.selectOption:hover {
     justify-content: center;
     padding: 1rem;
     color: #fff;
+    position: relative;
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $dark-grey;
+      opacity: 1;
+
+    }
     h5 {
+      z-index: 1;
       text-transform: uppercase;
       color: inherit;
       text-align: center;

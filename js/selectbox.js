@@ -14,29 +14,34 @@ $(document).ready(function() {
 
 				$('.comp-img').each(function(i){
 					let topic = $(this).data('topic');
-					$(this).css('backgroundImage', 'url(img/' + topic + '.jpg)')
-						.hover(function(){
-							$(this).css({'background': 'rgb(68, 68, 68)', 'backgroundImage': 'none'});
-							}, function(){
-							$(this).css({'backgroundImage': 'url(img/' + topic + '.jpg)', 'backgroundSize': 'cover', 'backgroundPosition':'center'});
-							}
-						);
+					$(this).css('backgroundImage', 'url(img/' + topic + '.jpg)');
+					if(topic === "finance") {
+						$(this).find('.overlay').css('opacity', '1');
+					}
 				});
 
+				getAjax('finance');
+				$('[data-topic="finance"]').find('div').addClass('overlay');
+
+				// $('.comp-img').hover(function(){
+				// 	$(this).find('div').toggleClass('overlay');
+				// }, function(){
+				// 	$(this).find('div').toggleClass('overlay');
+				// });
 
 				$('.comp-img').click(function(){
+					$('.comp-img').find('div').removeClass('overlay')
+					$(this).find('div').addClass('overlay');
 					let topic = $(this).data('topic');
-					$(this).css({'backgroundImage': 'none'});
-
-
 					getAjax(topic);
-
 				});
 
 
 
 
 });
+
+
 
 function getAjax(topicName) {
 		let url = "data.php?topic=" + topicName;
