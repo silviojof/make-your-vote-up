@@ -3,9 +3,7 @@
 // -----------------------------------------------------------------------------
 
 //structure testing
-* {
-   outline: 1px gainsboro solid;
-}
+
 //
 
 .colors {
@@ -21,7 +19,7 @@
 // Selectors to add the overlay images
 
 @include breakpoint(medium up) {
-    
+
     [data-party] {
         background-color:transparent;
         background-size:cover;
@@ -44,7 +42,7 @@
     [data-party="new-democratic"] {
         background-image:url("./../img/party-leaders-home/ndp-homepage.jpg");
     }
-    
+
 }
 
 [data-party] {

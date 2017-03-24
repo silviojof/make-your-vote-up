@@ -11,7 +11,7 @@
 
       $message = "<div class='small-12 medium-6 large-3 column comp-party' id='comp-". $name . "'>
           <header class='comp-header'>
-            <h2>" . $name . "<span class='comp-vote'>0</span></h2>
+            <h2>" . $name . "<span class='comp-vote' id='comp-vote-" . $name . "'>0</span></h2>
           </header>
           <div class='comp-body'>
             <div class='comp-text'>
@@ -20,7 +20,7 @@
               </ul>
             </div>
             <div class='comp-icons'>
-              <span><i class='fa fa-thumbs-o-up' aria-hidden='true'></i></span>
+              <span data-vote='" . $name . "' data-topic='" . $topic . "' class='vote-btn'><i class='fa' aria-hidden='true'></i></span>
               <span class='hide-for-large'><i class='fa fa-long-arrow-up' aria-hidden='true'></i></span>
             </div>
           </div>
