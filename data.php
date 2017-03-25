@@ -2,7 +2,7 @@
   require('connection.php');
 
   function comparisson($name, $topic) {
-    $query = "SELECT * FROM conservative_tb WHERE name=" . "'" . $name . "'";
+    $query = "SELECT * FROM comparison_tb WHERE name=" . "'" . $name . "'";
     $queryResult = mysqli_query(connect_db(), $query);
     $numOfRows = mysqli_num_rows($queryResult);
     if($numOfRows > 0) {
@@ -16,12 +16,12 @@
           <div class='comp-body'>
             <div class='comp-text'>
               <ul>
-                <li>" . $row[$topic] . "</li>
+                " . $row[$topic] . "
               </ul>
             </div>
             <div class='comp-icons'>
               <span data-vote='" . $name . "' data-topic='" . $topic . "' class='vote-btn'><i class='fa' aria-hidden='true'></i></span>
-              <span class='hide-for-large'><i class='fa fa-long-arrow-up' aria-hidden='true'></i></span>
+              <span class='hide-for-large to-top'><i class='fa fa-long-arrow-up' aria-hidden='true'></i></span>
             </div>
           </div>
         </div>";

@@ -27,15 +27,15 @@
           <span class='selected'></span>
           <span class='selectArrow'>&#9660</span>
           <ul class="selectOptions" >
-              <li class="selectOption" data-value="0">Public Finance</li>
-              <li class="selectOption" data-value="1">Taxation and Economy</li>
-              <li class="selectOption" data-value="2">Infra-structure</li>
-              <li class="selectOption" data-value="3">Jobs</li>
-              <li class="selectOption" data-value="4">Families</li>
-              <li class="selectOption" data-value="5">Foreign Policy</li>
-              <li class="selectOption" data-value="6">Health</li>
-              <li class="selectOption" data-value="7">Marijuana Legalisation</li>
-              <li class="selectOption" data-value="8">Energy</li>
+              <li class="selectOption" data-topic="finance" data-value="0">Public Finance</li>
+              <li class="selectOption" data-topic="taxes" data-value="1">Taxation and Economy</li>
+              <li class="selectOption" data-topic="infrastructure" data-value="2">Infra-structure</li>
+              <li class="selectOption" data-topic="jobs" data-value="3">Jobs</li>
+              <li class="selectOption" data-topic="family" data-value="4">Families</li>
+              <li class="selectOption" data-topic="foreign" data-value="5">Foreign Policy</li>
+              <li class="selectOption" data-topic="health" data-value="6">Health</li>
+              <li class="selectOption" data-topic="marijuana" data-value="7">Marijuana Legalisation</li>
+              <li class="selectOption" data-topic="energy" data-value="8">Energy</li>
           </ul>
       </div>
     </div>
