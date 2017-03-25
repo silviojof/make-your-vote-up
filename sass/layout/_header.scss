@@ -8,12 +8,50 @@
 
 .site-nav img {
     max-height:calcRem(50px);
-    margin:calcRem(-20px);
+    padding-left: 2rem;
 }
 
 
-#site-menu {
-    cursor:pointer;
+.site-menu {
+    a {
+      color: $dark-grey;
+      text-transform: uppercase;
+      font-family: $text-font-hero;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+}
+
+.main-logo {
+  a {
+    display: flex;
+    height: calcRem(90px);
+    align-items: center;
+  }
+}
+
+.party, .site-menu {
+  display: block;
+  align-items: stretch;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  a {
+    height: calcRem(90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 6px solid transparent;
+    &:hover {
+      border-top: 6px solid rgba(0,0,0,0.3);
+      text-decoration: none;
+    }
+  }
+}
+
+.parties-nav {
+  margin: 0;
+  padding: 0;
 }
 
 .dropdown {
@@ -22,16 +60,22 @@
 
 .site-nav {
     background-color:$light-grey;
-    padding:calcRem(40px);
 }
 
 .party-nav {
-    text-align:center;
+    margin: 0;
+    padding: 0;
 }
 
 .party-box {
-    padding:calcRem(40px) 0;
     text-align:center;
+    a {
+      color: $white-font;
+      text-transform: uppercase;
+      font-family: $text-font-hero;
+      font-weight: 600;
+      font-size: 1rem;
+    }
 }
 
 .conservative {
@@ -48,5 +92,4 @@
 
 .new-democratic {
     background-color:$mid-orange;
-    white-space:nowrap;
 }

@@ -23,7 +23,7 @@
   <div class="expanded row hide-for-large">
     <div class="small-12 medium-6 column comp-selectbox">
       <div class='selectBox'>
-          <input type="hidden" value="1" class="price_values"/>
+          <input type="hidden" value="1" class="price_values" id="comp-selectbox"/>
           <span class='selected'></span>
           <span class='selectArrow'>&#9660</span>
           <ul class="selectOptions" >

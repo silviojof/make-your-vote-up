@@ -10,14 +10,22 @@ $(document).ready(function() {
 
     var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'family', 'foreign', 'health', 'marijuana', 'energy'];
 		var $text = ['public finance', 'taxation and economy', 'infrastructure', 'jobs', 'families', 'foreign policy', 'health', 'marijuana legalisation', 'energy'];
+		var $provincesName = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland and Labrador', 'Nova Scotia', 'Ontario', 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Northwest Territories', 'Yukon', 'Nunavut'];
+		var $provincesImg = ['ab', 'bc', 'mb', 'nb', 'nl', 'ns', 'on', 'pe', 'qc', 'sk', 'nt', 'yt', 'nu'];
 
 		//Change the background image on changes in selectbox (mobile) and content in topics (ajax)
-    $('input.price_values').change(function(){
+    $('#comp-selectbox').change(function(){
       let x = $(this).val();
       $('.comp-topic').css('backgroundImage', "url('img/" + $images[x] + ".jpg')");
 			$('.comp-topic').find('h2').text($text[x]);
 			let topic = $images[x];
 			getAjax(topic);
+    });
+
+		$('#whos-selectbox').change(function(){
+      let val = $(this).val();
+      $('.whos-topic').css('backgroundImage', "url('img/" + $provincesImg[val] + ".jpg')");
+			$('.whos-topic').find('h2').text($provincesName[val - 1]);
     });
 
 		//Set background images for topics on desktop version
@@ -111,6 +119,28 @@ $(document).ready(function() {
 			$('html, body').animate({scrollTop: 0}, 'slow');
 			return false;
 		});
+
+		// Maps
+
+		//var $provincesImg = ['ab', 'bc', 'mb', 'nb', 'nl', 'ns', 'on', 'pe', 'qc', 'sk', 'nt', 'yt', 'nu'];
+		$.each($provincesImg, function(i, val){
+			let $id = '#' + val.toUpperCase();
+
+			$($id).hover(function(){
+				$(this).css({'fill': 'rgb(68, 68, 68)', 'cursor': 'pointer'});
+			},
+			function(){
+				$(this).css('fill', '#f2f2f2');
+			});
+			$($id).click(function(){
+				$('.whos-topic').css('backgroundImage', "url('img/" + val + ".jpg')");
+				$('.whos-topic').find('h2').text($provincesName[val - 1]);
+			})
+		});
+
+
+
+
 
 });
 
