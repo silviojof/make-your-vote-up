@@ -18,7 +18,7 @@
   font-weight:600;
 }
 .representative-party{
-  width:55%;
+  width:55.5%;
 }
 .keep-bottom{
   position: fixed;
@@ -28,6 +28,7 @@
 }
 
 .mp-btn {
+  float:right;
   border: solid 1px black;
   background-color:#fff;
   color: #000;
@@ -53,8 +54,14 @@
 #modalDiv { position:fixed; width:400px; height:280px; background-color:blue; left:50%; margin-left:-200px; top:50%; margin-top:-140px; z-index:11;}
 // ___________________________________
 
-.proposal h1{
-  color:$dark-blue;
+.proposal {
+    position:relative;
+    background-size:cover;
+    height:50vh;
+  h1{
+  color:$mid-blue;
+  }
+  span{color: #fff;}
 }
 .show-and-hide{
   z-index:25;
@@ -64,3 +71,15 @@
     display: none;
 }
 /** Topics Menu **/
+.over-lay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $mid-blue;
+  opacity: 0.3;
+  z-index:1;
+}
+.proposal-large {
+  position:relative;
+  z-index:2;
+}

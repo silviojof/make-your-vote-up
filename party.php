@@ -13,7 +13,7 @@
   <?php
     include('partials/main-nav.php');
    ?>
-  <div class="row">
+  <div class="">
     <div class="party-page small-12 medium-12 large-6 column">
       <div class="small-12 medium-12 large-6 column hang-left">
         <img class="party-logo" src="img/conservative_party.svg"/>
@@ -21,7 +21,7 @@
           <img class="representative-party show-for-large" src="img/party-leaders/ambrose.jpg"/>
       </div>
     </div>
-      <div class="small-12 medium-12 large-8 column representative">
+      <div class="small-12 medium-12 large-6 column representative">
           <h2>REPRESENTATIVE</h2>
           <p class="uppercase"><strong>rona ambrose</strong><br/>
               BORN: APRIL 30, 1959<br/>
@@ -46,20 +46,56 @@
           <button data-mp="pi" class="mp-btn">PI</button>
 
       </div>
-
     </div>
 
-    <div class="small-12 medium-12 large-6 column party-background">
-      <div class="small-12 medium-12 large-6 column proposal">
-        <h1>PROPOSALS</h1>
-        <div>
-          <div class="show-and-hide">Energy & Enviroment
-          </div>
-          <div class="show">Hello World</div>
-        </div>
+    <div class="">
+      <div class="small-12 medium-12 large-6 remove-padding column">
+        <div class="small-12 medium-12 large-12 remove-padding column proposal" id="bg-image">
+          <div class="over-lay show-for-large"></div>
 
+          <div class="expanded row hide-for-large">
+            <h1>PROPOSALS</h1>
+            <div class="small-12 medium-6 column comp-selectbox">
+              <div class='selectBox'>
+                  <input type="hidden" value="1" class="price_values"/>
+                  <span class='selected'></span>
+                  <span class='selectArrow'>&#9660</span>
+                  <ul class="selectOptions" >
+                      <li class="selectOption" data-value="0">Public Finance</li>
+                      <li class="selectOption" data-value="1">Taxation and Economy</li>
+                      <li class="selectOption" data-value="2">Infra-structure</li>
+                      <li class="selectOption" data-value="3">Jobs</li>
+                      <li class="selectOption" data-value="4">Families</li>
+                      <li class="selectOption" data-value="5">Foreign Policy</li>
+                      <li class="selectOption" data-value="6">Health</li>
+                      <li class="selectOption" data-value="7">Marijuana Legalisation</li>
+                      <li class="selectOption" data-value="8">Energy</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="small-12 medium-6 column comp-topic">
+              <h2>Public Finance</h2>
+            </div>
+          </div>
+          <div class="show-for-large column proposal-large">
+            <h1>PROPOSALS</h1>
+            <div class="show-for-large column">
+              <span class="show-and-hide" data-value="0">Public Finance ||</span>
+              <span class="show-and-hide" data-value="1">Taxation and Economy || </span>
+              <span class="show-and-hide" data-value="2">Infra-structure || </span>
+              <span class="show-and-hide" data-value="3">Jobs || </span>
+              <span class="show-and-hide" data-value="4">Families || </span>
+              <span class="show-and-hide" data-value="5">Foreign Policy || </span>
+              <span class="show-and-hide" data-value="6">Health || </span>
+              <span class="show-and-hide" data-value="7">Marijuana Legalisation || </span>
+              <span class="show-and-hide" data-value="8">Energy</span>
+          </div>
+       </div>
      </div>
    </div>
+ </div>
+ <div class="">
+   <div class="show">hello world</div>
  </div>
   <!-- </div> -->
 
@@ -75,6 +111,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/selectbox.js"></script>
   <script type="text/javascript" src="js/parties.js"></script>
 
 

@@ -145,7 +145,17 @@ li.selectOption:hover {
     justify-content: center;
     padding: 1rem;
     color: #fff;
+    position: relative;
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $dark-grey;
+      opacity: 1;
+
+    }
     h5 {
+      z-index: 1;
       text-transform: uppercase;
       color: inherit;
       text-align: center;
@@ -270,6 +280,13 @@ li.selectOption:hover {
   }
 }
 
+#voted-liberal {
+  background-color: $dark-red !important;
+  i {
+    color: $mid-red !important;
+  }
+}
+
 
 .comp-vote {
   width: 3rem;
@@ -306,6 +323,7 @@ li.selectOption:hover {
 .comp-icons {
   display: block;
   text-align: center;
+  cursor: pointer;
   span {
     margin: 0.5rem;
     width: 3.5rem;

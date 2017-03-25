@@ -38,6 +38,10 @@ $(document).ready(function(){
     $(".green").text("green");
     $(".new-democratic").text("new democratic");
 
+    $(".conservative").eq(0).text("conservative");
+    $(".liberal").eq(0).text("liberal");
+    $(".green").eq(0).text("green");
+    $(".new-democratic").eq(0).text("new democratic");
 
 
 });
