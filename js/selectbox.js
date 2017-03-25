@@ -1,112 +1,116 @@
 //Drop Down Menu
 
 $(document).ready(function() {
-				enableSelectBoxes();
 
-        var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'families', 'foreign', 'health', 'marijuana', 'energy'];
-				var $text = ['public finance', 'taxation and economy', 'infrastructure', 'jobs', 'families', 'foreign policy', 'health', 'marijuana legalisation', 'energy'];
+		enableSelectBoxes();
 
-        $('input.price_values').change(function(){
-          let x = $(this).val();
-          $('.comp-topic').css('backgroundImage', "url('img/" + $images[x] + ".jpg')");
-					$('.comp-topic').find('h2').text($text[x]);
-        });
+		//Use ajax function to load content for first time and change overlay for default topic
+		getAjax('finance');
+		$('[data-topic="finance"]').find('div').addClass('overlay');
 
-				$('.comp-img').each(function(i){
+    var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'family', 'foreign', 'health', 'marijuana', 'energy'];
+		var $text = ['public finance', 'taxation and economy', 'infrastructure', 'jobs', 'families', 'foreign policy', 'health', 'marijuana legalisation', 'energy'];
+
+		//Change the background image on changes in selectbox (mobile) and content in topics (ajax)
+    $('input.price_values').change(function(){
+      let x = $(this).val();
+      $('.comp-topic').css('backgroundImage', "url('img/" + $images[x] + ".jpg')");
+			$('.comp-topic').find('h2').text($text[x]);
+			let topic = $images[x];
+			getAjax(topic);
+    });
+
+		//Set background images for topics on desktop version
+		$('.comp-img').each(function(i){
+			let topic = $(this).data('topic');
+			$(this).css('backgroundImage', 'url(img/' + topic + '.jpg)');
+			if(topic === "finance") {
+				$(this).find('.overlay').css('opacity', '1');
+			}
+		});
+
+		// Check if voteStatus is alreadu on localStorage, if not create it.
+		if(localStorage.voteStatus) {
+			$voteStatusParsed = JSON.parse(localStorage.voteStatus);
+		} else {
+			$voteStatus = {
+				finance: [false, undefined],
+				taxes: [false, undefined],
+				infrastructure: [false, undefined],
+				jobs: [false, undefined],
+				family: [false, undefined],
+				foreign: [false, undefined],
+				health: [false, undefined],
+				marijuana: [false, undefined],
+				energy: [false, undefined]
+			}
+			localStorage.voteStatus = JSON.stringify($voteStatus);
+			$voteStatusParsed = JSON.parse(localStorage.voteStatus);
+		}
+
+		// Change overlay on topic on click and change displayed topic
+		$('.comp-img').click(function(){
+			$('.comp-img').find('div').removeClass('overlay')
+			$(this).find('div').addClass('overlay');
+			let topic = $(this).data('topic');
+			getAjax(topic);
+		});
+
+		// Upon clicking in the vote (Delgate had to be used)
+		$('#parties-topic').delegate('.vote-btn', 'click', function(){
+			// If topic has already being voted (and the one clicked was not the choosen)
+			if($(this).find('i').hasClass('fa-times')) {
+				//Change the vote and update status in other field
 					let topic = $(this).data('topic');
-					$(this).css('backgroundImage', 'url(img/' + topic + '.jpg)');
-					if(topic === "finance") {
-						$(this).find('.overlay').css('opacity', '1');
-					}
-				});
-
-				getAjax('finance');
-				$('[data-topic="finance"]').find('div').addClass('overlay');
-
-				// $('.comp-img').hover(function(){
-				// 	$(this).find('div').toggleClass('overlay');
-				// }, function(){
-				// 	$(this).find('div').toggleClass('overlay');
-				// });
-
-				$('.comp-img').click(function(){
-					$('.comp-img').find('div').removeClass('overlay')
-					$(this).find('div').addClass('overlay');
+					let choosen = $voteStatusParsed[topic][1];
+					localStorage[choosen] = localStorage[choosen] - 1;
+					$('#comp-vote-' + choosen).text(localStorage[choosen]);
+					let $voteFor = $(this).data('vote');
+					if (localStorage[$voteFor]) {
+            localStorage[$voteFor] = Number(localStorage[$voteFor]) + 1;
+        	} else {
+            localStorage[$voteFor] = 1;
+        	}
+					$voteStatusParsed[topic][1] = $voteFor;
+					$('#comp-vote-' + $voteFor).text(localStorage[$voteFor]);
+					$('.vote-btn').find('i').removeClass('fa-thumbs-o-up').addClass('fa-times');
+					$(this).find('i').removeClass('fa-times').addClass('fa-check');
+			// If topic has already being voted (and the one clicked was the choosen)
+			} else if($(this).find('i').hasClass('fa-check')) {
+				//Cancel the vote and open other parties to vote
 					let topic = $(this).data('topic');
-					getAjax(topic);
+					let $voteFor = $(this).data('vote');
+					localStorage[$voteFor] = localStorage[$voteFor] - 1;
+					$voteStatusParsed[topic][1] = undefined;
+					$('#comp-vote-' + $voteFor).text(localStorage[$voteFor]);
+					$('.vote-btn').find('i').removeClass().addClass('fa fa-thumbs-o-up');
+			// If none has been voted:
+			} else {
+				var $voteFor = $(this).data('vote');
+				if (localStorage[$voteFor]) {
+          localStorage[$voteFor] = Number(localStorage[$voteFor]) + 1;
+      	} else {
+          localStorage[$voteFor] = 1;
+      	}
+				$('#comp-vote-' + $voteFor).text(localStorage[$voteFor]);
+				let $topic = $(this).data('topic');
+				$voteStatusParsed[$topic][0] = true;
+				$voteStatusParsed[$topic][1] = $voteFor;
+				$('.vote-btn').find('i').removeClass('fa-thumbs-o-up').addClass('fa-times');
+				$(this).find('i').removeClass('fa-times').addClass('fa-check');
+			}
+		});
 
-				});
+		// before reloading, update localStorage Object with current data
+		$(window).on('beforeunload', function(){
+			localStorage.voteStatus = JSON.stringify($voteStatusParsed);
+		});
 
-				$voteStatus = {
-					finance: [false, 4],
-					taxes: [false, 4],
-					infrastructure: [false, 4],
-					jobs: [false, 4],
-					family: [false, 4],
-					foreign: [false, 4],
-					health: [false, 4],
-					marijuana: [false, 4],
-					energy: [false, 4]
-				}
-				sessionStorage.setItem('voteStatus', JSON.stringify($voteStatus));
-				$voteStatusParsed = JSON.parse(sessionStorage.voteStatus);
-
-				$('#parties-topic').delegate('.vote-btn', 'click', function(){
-					if($(this).find('i').hasClass('fa-times')) {
-
-							console.log('this was not selected');
-							let topic = $(this).data('topic');
-							let choosen = $voteStatusParsed[topic][1];
-							sessionStorage[choosen] = sessionStorage[choosen] - 1;
-
-							$('#comp-vote-' + choosen).text(sessionStorage[choosen]);
-							let $voteFor = $(this).data('vote');
-							if (sessionStorage[$voteFor]) {
-		            sessionStorage[$voteFor] = Number(sessionStorage[$voteFor]) + 1;
-		        	} else {
-		            sessionStorage[$voteFor] = 1;
-		        	}
-
-							$voteStatusParsed[topic][1] = $voteFor;
-
-							$('#comp-vote-' + $voteFor).text(sessionStorage[$voteFor]);
-							$('.vote-btn').find('i').removeClass('fa-thumbs-o-up').addClass('fa-times');
-							$(this).find('i').removeClass('fa-times').addClass('fa-check');
-
-					} else if($(this).find('i').hasClass('fa-check')) {
-
-							let topic = $(this).data('topic');
-							let $voteFor = $(this).data('vote');
-							sessionStorage[$voteFor] = sessionStorage[$voteFor] - 1;
-							$voteStatusParsed[topic][1] = undefined;
-							$('#comp-vote-' + $voteFor).text(sessionStorage[$voteFor]);
-							$('.vote-btn').find('i').removeClass().addClass('fa fa-thumbs-o-up');
-
-
-							console.log('this was already selected');
-
-
-					} else {
-						var $voteFor = $(this).data('vote');
-						if (sessionStorage[$voteFor]) {
-	            sessionStorage[$voteFor] = Number(sessionStorage[$voteFor]) + 1;
-	        	} else {
-	            sessionStorage[$voteFor] = 1;
-	        	}
-						$('#comp-vote-' + $voteFor).text(sessionStorage[$voteFor]);
-						let $topic = $(this).data('topic');
-						$voteStatusParsed[$topic][0] = true;
-						$voteStatusParsed[$topic][1] = $voteFor;
-						$('.vote-btn').find('i').removeClass('fa-thumbs-o-up').addClass('fa-times');
-						$(this).find('i').removeClass('fa-times').addClass('fa-check');
-					}
-				});
-
-				// Clear sessionStorage on reload
-				$(window).on('beforeunload', function(){
-					sessionStorage.clear();
-				});
-
+		// Move to top:
+		$('#parties-topic').delegate('.to-top', 'click',function(){
+			$('html, body').animate({scrollTop: 0}, 'slow');
+			return false;
+		});
 
 });
 
@@ -120,10 +124,11 @@ function getAjax(topicName) {
 	  success: function(data) {
 			$('#parties-topic').html(data);
 			$('#parties-topic').attr('data-main-topic', topicName);
-
+			//If topic hasnt been vote yet, create Thumbs Up icon for all
 			if($voteStatusParsed[topicName][0] === false) {
 				$('.vote-btn').find('i').addClass('fa-thumbs-o-up');
 			} else {
+				// Else, check the vote status on localSTorage and define each icon accoridng
 				$('.vote-btn').each(function(i){
 					let vote = $(this).data('vote');
 					if($voteStatusParsed[topicName][1] === vote) {
@@ -133,10 +138,10 @@ function getAjax(topicName) {
 					}
 				});
 			}
-
+			//Grab the number of votes on localStorage and display it
 			var $parties = ['green', 'conservative', 'democratic', 'liberal'];
 			$.each( $parties, function(index, val){
-				$('#comp-vote-' + val).text(sessionStorage[val]);
+				$('#comp-vote-' + val).text(localStorage[val]);
 			});
 
 		}
@@ -166,8 +171,3 @@ function enableSelectBoxes(){
 		});
 	});
 }//-->
-
-function backgroundTopic() {
-  var x = $('.price_values').val();
-  console.log(x);
-}
