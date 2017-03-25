@@ -32,6 +32,7 @@
         <a href="comparison.php">comparison link</a>
         <a href="whosmymp.php">comparison link</a>
 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/video.js"></script>

@@ -1,26 +1,97 @@
 /************ party page  *******************/
-.hang-left{
-  float:left;
-  margin-left:-40%;
-  margin-top:5%;
+
+@include breakpoint(small only) {
+
+}
+
+.party-logo{
+  display:block;
+  margin-top:30px;
   width:65%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .representative h2, p{
-  text-align:right;
-  font-weight:300;
+  color:#000;
 }
 .representative h2{
-  margin-top:20%;
+  color:$mid-blue;
+  font-weight:600;
+  text-align:center;
 }
 .representative-party{
-  width:28%;
+  width:55%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
-.keep-bottom{
-  position: fixed;
-  bottom:-10px;
-  left: 0;
-  z-index: 1000;
+.party-info{
+  text-align:center;
+  margin-bottom:30px;
 }
-.party-page{
-  height:100vh;
+.mp-btn {
+  margin-left:auto;
+  margin-right:auto;
+  border: solid 1px black;
+  background-color:#fff;
+  color: #000;
+  padding: 3px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 22px;
+  z-index:20;
+}
+.party-background{
+  background-color:$mid-blue;
+  height:50vh;
+  position:absolute;
+  right:0;
+
+}
+// modal box for mp
+#overlayDiv { position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.6); width:100%; height:100%; z-index:10; display:none; }
+#modalDiv { position:fixed; width:400px; height:280px; background-color:blue; left:50%; margin-left:-200px; top:50%; margin-top:-140px; z-index:11;}
+// ___________________________________
+.proposal-list-height{
+  margin-top:150px;
+  text-align: center;
+}
+.proposal {
+    position:relative;
+    background-size:cover;
+    height:50vh;
+  h1{
+  color:$mid-blue;
+  text-align: center;
+  }
+  .proposal-list {
+    color: #fff;
+    text-transform:uppercase;
+    font-size:16px;
+  }
+}
+.show-and-hide{
+  z-index:25;
+  cursor: pointer;
+  margin-top:50px;
+}
+.show {
+    display: none;
+}
+/** Topics Menu **/
+.over-lay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $mid-blue;
+  opacity: 0.3;
+  z-index:1;
+}
+.proposal-large {
+  position:relative;
+  z-index:2;
 }

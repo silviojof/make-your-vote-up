@@ -33,11 +33,13 @@ $(document).ready(function(){
         $(".party").eq(i+4).attr('data-party', classes[randomNumber]);
     }
 
+
     $(".conservative").eq(0).html('<a href="party.php?name=conservative">conservative</a>');
     $(".liberal").eq(0).html('<a href="liberal.php">liberal</a>');
     $(".green").eq(0).html('<a href="green.php">green</a>');
     $(".new-democratic").eq(0).html('<a href="new-democratic.php">new democratic</a>');
 
     //
+
 
 });
