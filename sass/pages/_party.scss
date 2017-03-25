@@ -1,26 +1,66 @@
 /************ party page  *******************/
 .hang-left{
+  position: absolute;
   float:left;
-  margin-left:-40%;
-  margin-top:5%;
-  width:65%;
+  top:16%;
+  left:20px;
+}
+.party-logo{
+  width:30%;
 }
 .representative h2, p{
   text-align:right;
-  font-weight:300;
+  color:#000;
 }
 .representative h2{
-  margin-top:20%;
+  margin-top:18%;
+  color:$mid-blue;
+  font-weight:600;
 }
 .representative-party{
-  width:28%;
+  width:55%;
 }
 .keep-bottom{
   position: fixed;
   bottom:-10px;
-  left: 0;
-  z-index: 1000;
+  left: -20px;
+  z-index: -5;
 }
-.party-page{
-  height:100vh;
+
+.mp-btn {
+  border: solid 1px black;
+  background-color:#fff;
+  color: #000;
+  padding: 3px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 22px;
+  z-index:20;
 }
+.party-background{
+  background-color:$mid-blue;
+  height:50vh;
+  position:absolute;
+  right:0;
+
+}
+// modal box for mp
+#overlayDiv { position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.6); width:100%; height:100%; z-index:10; display:none; }
+#modalDiv { position:fixed; width:400px; height:280px; background-color:blue; left:50%; margin-left:-200px; top:50%; margin-top:-140px; z-index:11;}
+// ___________________________________
+
+.proposal h1{
+  color:$dark-blue;
+}
+.show-and-hide{
+  z-index:25;
+  cursor: pointer;
+}
+.show {
+    display: none;
+}
+/** Topics Menu **/
