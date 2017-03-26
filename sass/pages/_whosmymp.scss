@@ -35,3 +35,24 @@
     font-size: 2.5rem;
   }
 }
+
+.whos-right-side {
+  background-color: $light-grey;
+  min-height: 85.3vh;
+}
+
+.whos-mps {
+  padding: 2rem;
+  span {
+    margin-left: 0.5rem;
+  }
+  ul {
+    margin: 0; padding: 0; list-style: none;
+    display: block;
+  }
+  li {
+    float: left;
+    padding: 1rem;
+    width: 18rem;
+  }
+}

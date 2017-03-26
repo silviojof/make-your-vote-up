@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 
+
 		enableSelectBoxes();
 
 		//Use ajax function to load content for first time and change overlay for default topic
@@ -114,6 +115,7 @@ $(document).ready(function() {
 			localStorage.voteStatus = JSON.stringify($voteStatusParsed);
 		});
 
+
 		// Move to top:
 		$('#parties-topic').delegate('.to-top', 'click',function(){
 			$('html, body').animate({scrollTop: 0}, 'slow');
@@ -134,10 +136,23 @@ $(document).ready(function() {
 			});
 			$($id).click(function(){
 				$('.whos-topic').css('backgroundImage', "url('img/" + val + ".jpg')");
-				$('.whos-topic').find('h2').text($provincesName[val - 1]);
+				$('.whos-topic').find('h2').text($provincesName[i]);
+				console.log(val);
+				getAjaxMp(val);
 			})
 		});
 
+
+		//Modal Subscribe
+		$('#modal-close').click(function(){
+			$('.email-modal').css('display', 'none');
+			console.log('clicked');
+		});
+
+		$('#subscribe-open').click(function(){
+			console.log('subs clicked');
+			$('.email-modal').css('display', 'flex');
+		});
 
 
 
@@ -174,6 +189,20 @@ function getAjax(topicName) {
 				$('#comp-vote-' + val).text(localStorage[val]);
 			});
 
+		}
+	}); // end ajax call
+}
+
+/* Whos my MP AJAX */
+
+function getAjaxMp(province) {
+		let url = "whos-data.php?province=" + province;
+		$.ajax({
+	  url: url,
+	  type: 'post',
+	  success: function(data) {
+			$('#whos-mps').html(data);
+			$('#whos-mps').attr('data-province', province);
 		}
 	}); // end ajax call
 }

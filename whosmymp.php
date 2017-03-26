@@ -14,7 +14,7 @@
     include('partials/main-nav.php');
    ?>
 
-  <div class="expanded row small-collapse">
+  <div class="expanded row small-collapse margin-correction margin-correction-bottom">
     <div class="medium-12 large-6 column">
       <div class="whos-selectbox hide-for-medium">
         <div class='selectBox'>
@@ -45,14 +45,67 @@
       </div>
     </div>
 
-    <div class="medium-12 large-6 column">
+    <div class="medium-12 large-6 column whos-right-side">
       <div class="whos-topic">
         <h2>Alberta</h2>
+        <ul>
+
+        </ul>
+      </div>
+      <div class="whos-mps">
+        <ul id="whos-mps">
+          <li>Dan Albas <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Ziad Aboultaif <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Harold Albrecht <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>John Aldag <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Omar Alghabra <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Leona Allesley <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Dear Allison <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Rona Ambrose <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>William Amos <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Gary Anandasangaree <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>David Anderson <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Charlie Angus <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Mel Arnold <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>René Arseneault <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Chandra Arya <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Niki Ashton <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Robert Aubin <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Ramez Ayoub <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Vance Badaway <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Larry Bagnell <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Navdeep Bains <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>John Barlow <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Xavier Barslou-Duval <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Frank Baylis <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Mario Beaulieu <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Tery Beech <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Carolyn Bennett <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Sheri Benson <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Candice Bergen <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Maxime Bernier <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Luc Berthold <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>James Bezan <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Hon. Marie-Claude Bilbeau <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Chris Bittle <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Daniel Blaikie <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Bill Blair <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Rachel Blaney <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Kelly Block <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Randy Boissonnault <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Mike Bossio <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Sylvie Boucher <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Michel Bouldrias <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+          <li>Alexandre Boulerice <span><i class="fa fa-square" aria-hidden="true"></i></span></li>
+        </ul>
       </div>
     </div>
 
   </div>
 
+  <?php
+    include('partials/footer.php');
+   ?>
 
 
   <script

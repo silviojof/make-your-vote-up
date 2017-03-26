@@ -12,7 +12,7 @@
   <?php
     include('partials/main-nav.php');
    ?>
-  <div class="expanded row">
+  <div class="expanded row margin-correction">
     <div class="small-12 medium-6 column comp-title comp-light">
         <h2>read each topic</h2>
     </div>
@@ -81,10 +81,13 @@
       <div></div>
     </div>
   </div>
-  <div class="expanded row collapse" id="parties-topic">
+  <div class="expanded row collapse margin-correction-bottom" id="parties-topic">
 
   </div>
 
+  <?php
+    include('partials/footer.php');
+   ?>
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"

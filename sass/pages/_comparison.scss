@@ -292,7 +292,7 @@ li.selectOption:hover {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  line-height: 1.8;
+  line-height: 2.1;
   background-color: #fff;
   display: inline-block;
   margin-left: 1.5rem;
@@ -307,6 +307,7 @@ li.selectOption:hover {
     font-weight: 600;
     margin: 0;
     line-height: 1;
+    font-size: 1.4rem;
   }
 }
 
@@ -318,6 +319,10 @@ li.selectOption:hover {
   color: $dark-grey;
   font-size: calcRem(16px);
   line-height: 2;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    height: 200px;
+    overflow: auto;
+  }
 }
 
 .comp-icons {
@@ -339,3 +344,25 @@ li.selectOption:hover {
 }
 
 /** End of Parties Box **/
+
+/** Scroll Bars **/
+
+.comp-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.comp-text::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+/* Handle */
+.comp-text::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(68, 68, 68, 0.8);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.comp-text::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(68, 68, 68, 0.4);
+}

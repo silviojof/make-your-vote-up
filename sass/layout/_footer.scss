@@ -1,3 +1,124 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.main-footer {
+  background-color: $dark-grey;
+  .footer-side {
+    padding: 0.7rem;
+    span {
+      font-family: $text-font-hero;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+  .footer-subscribe {
+    text-align: right;
+  }
+  i, span {
+    color: $light-grey;
+    padding: 0 0.5rem;
+    &:hover {
+      color: $mid-grey;
+      cursor: pointer;
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+#subscribe-open {
+  display: inline-block;
+}
+
+.email-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-modal-box {
+  background-color: $white-font;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.3rem;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  max-width: calcRem(800px);
+  p, h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: $text-font-hero;
+    color: $dark-grey;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 15rem;
+    padding: 3rem 0;
+  }
+  i {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: $dark-grey;
+    color: $light-grey;
+    border-radius: 50%;
+    height: 1.6rem;
+    width: 1.6rem;
+    text-align: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+  @media screen and (min-width: map-get($breakpoints,medium)) {
+    padding: 3rem;
+  }
+}
+
+.form-modal {
+  input, button {
+
+  }
+  input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    border: 1.5px solid $mid-grey;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    &:focus {
+      outline-color: $dark-grey;
+    }
+  }
+  button {
+    width: 100%;
+    background-color: $dark-grey;
+    color: $light-grey;
+    text-transform: uppercase;
+    font-family: $text-font-hero;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1.3rem;
+    &:hover {
+      background-color: $mid-grey;
+      cursor: pointer
+    }
+  }
+}
