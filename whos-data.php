@@ -8,7 +8,7 @@
     if($numOfRows > 0) {
       while($row = mysqli_fetch_assoc($queryResult)) {
 
-      echo "<li data-party='" . $row['party'] . "'>" . $row['mp'] . "<span><i class='fa fa-square' aria-hidden='true'></i></span></li>";
+      echo "<li data-party-name='" . $row['party'] . "'>" . $row['mp'] . "<span><i class='fa fa-square' aria-hidden='true'></i></span></li>";
 
       }
     } else {

@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 		//Use ajax function to load content for first time and change overlay for default topic
 		getAjax('finance');
+		getAjaxMp('ab');
 		$('[data-topic="finance"]').find('div').addClass('overlay');
 
     var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'family', 'foreign', 'health', 'marijuana', 'energy'];
