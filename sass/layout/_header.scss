@@ -5,9 +5,7 @@
 .main-nav {
     color:white;
     @media screen and (min-width: map-get($breakpoints, large)) {
-      width: 100%;
-      position: fixed;
-      top: 0;
+
     }
 }
 
@@ -29,21 +27,38 @@
 }
 
 
+#site-menu {
+  position: relative;
+  i {
+    color: $dark-grey;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 9px;
+    left: 14px;
+  }
+}
+
 .site-menu {
-    a {
-      color: $dark-grey;
-      text-transform: uppercase;
-      font-family: $text-font-hero;
-      font-weight: 600;
-      font-size: 1rem;
-    }
+  a {
+    font-family: $text-font-hero;
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
 
 .main-logo {
   a {
     display: flex;
-    height: calcRem(90px);
+    height: 8vh;
     align-items: center;
+  }
+  @media screen and (max-height: map-get($breakpoints, medium)) {
+    img {
+      width: 10rem;
+      padding: 0.4rem;
+    }
   }
 }
 
@@ -54,7 +69,7 @@
   flex-grow: 1;
   text-align: center;
   a {
-    height: calcRem(90px);
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: center;
