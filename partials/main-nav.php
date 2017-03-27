@@ -17,6 +17,6 @@
             <li class="medium-3 columns party-box party"></li>
             <li class="medium-3 columns party-box party"></li>
             <li class="medium-3 columns party-box party"></li>
-        </div>
+        </ul>
     </div>
 </nav>
