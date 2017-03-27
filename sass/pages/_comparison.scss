@@ -1,12 +1,20 @@
 .comp-title {
-
+  @media screen and (min-width: map-get($breakpoints,large)) {
+    height: 25vh;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: map-get($breakpoints,large)) {
+    height: calcRem(200px);
+  }
   h2 {
     text-transform: uppercase;
     text-align: center;
     font-family: 'cooper hewitt';
     font-weight: 900;
     @media screen and (min-width: map-get($breakpoints,large)) {
-      padding: 6rem 0;
+
     }
   }
   &.comp-dark {
@@ -63,7 +71,7 @@ div.selectBox {
 }
 
 span.selected {
-   width: 270px;
+   width: 250px;
    text-indent: 10px;
    border: 1px solid rgb(233, 233, 233);
    border-right: none;
@@ -103,7 +111,7 @@ ul.selectOptions {
   position: absolute;
   top: 46px;
   left: 0;
-  width: 320px;
+  width: 300px;
   border: 1px solid #ccc;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -136,6 +144,9 @@ li.selectOption:hover {
 .comp-img-box {
   display: flex;
   align-content: stretch;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    height: 15vh;
+  }
   .comp-img {
     background-size: cover;
     background-position: center center;
@@ -150,7 +161,7 @@ li.selectOption:hover {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: $dark-grey;
+      background-color: black;
       opacity: 1;
 
     }
@@ -300,6 +311,13 @@ li.selectOption:hover {
 
 .comp-header {
   padding: 2rem 0;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    padding: 0;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   h2 {
     text-transform: uppercase;
     color: #fff;
@@ -312,24 +330,40 @@ li.selectOption:hover {
 }
 
 .comp-body {
-  padding: 0.8rem;
+  @media screen and (max-width: map-get($breakpoints, large)) {
+    padding: 0.8rem;
+  }
 }
 
 .comp-text {
   color: $dark-grey;
   font-size: calcRem(16px);
   line-height: 2;
-  @media screen and (min-width: map-get($breakpoints, large)) {
-    height: 200px;
+  @media screen and (min-width: map-get($breakpoints, medium)) and (max-width: map-get($breakpoints, large)) {
+    height: calcRem(280px);
     overflow: auto;
+    padding: 0.8rem;
   }
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    height: 27vh;
+    overflow: auto;
+    padding: 0.8rem;
+  }
+
 }
 
 .comp-icons {
   display: block;
   text-align: center;
-  cursor: pointer;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    padding: 0;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   span {
+    cursor: pointer;
     margin: 0.5rem;
     width: 3.5rem;
     height: 3.5rem;

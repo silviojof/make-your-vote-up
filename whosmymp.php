@@ -14,7 +14,7 @@
     include('partials/main-nav.php');
    ?>
 
-  <div class="expanded row small-collapse margin-correction margin-correction-bottom">
+  <div class="expanded row small-collapse">
     <div class="medium-12 large-6 column">
       <div class="whos-selectbox hide-for-medium">
         <div class='selectBox'>

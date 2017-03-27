@@ -7,10 +7,11 @@ $(document).ready(function(){
         if ($(".site-menu").hasClass("dropdown")){
             $(".site-menu").removeClass("dropdown");
             $(".site-menu").addClass("hide-for-small-only");
-
+            $(".parties-nav").addClass("show-for-medium");
         }
         else {
             $(".site-menu").removeClass("hide-for-small-only");
+            $(".parties-nav").removeClass("show-for-medium");
             $(".site-menu").addClass("dropdown");
         }
     });
