@@ -4,15 +4,13 @@
             <div class="medium-6 small-10 columns main-logo">
                 <a href="index.php"><img src="./img/logo/logo4.svg" alt="make-your-vote-up logo"></a>
             </div>
-
-            <div class="small-2 columns show-for-small-only" id="site-menu">menu</div>
+            <div class="small-2 columns show-for-small-only" id="site-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
             <div class="medium-3 columns hide-for-small-only site-menu"><a href="whosmymp.php">who's my mp</a></div>
             <div class="medium-3 columns hide-for-small-only site-menu"><a href="comparison.php">compare parties</a></div>
-
         </div>
     </div>
-    <div class="large-6 columns medium-12 hide-for-small-only">
-        <ul class="row expanded small-collapse parties-nav">
+    <div class="large-6 columns medium-12">
+        <ul class="row expanded small-collapse parties-nav show-for-medium">
             <li class="medium-3 columns party-box party"></li>
             <li class="medium-3 columns party-box party"></li>
             <li class="medium-3 columns party-box party"></li>
