@@ -10,24 +10,22 @@
     <body>
 
         <?php include('partials/main-nav.php'); ?>
-        <div class="row expanded small-collapse margin-correction">
-            <div class="large-6 medium-12 columns video-bg">
-                <h1>get yourself informed. make your vote up.</h1>
-            </div>
-            <div class="large-6 medium-12 columns">
-                <div class="row parties">
-                    <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                    <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                    <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                    <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+            <div id="video-bg">
+                <div class="page-header">
+                    <h1>get yourself informed. make your vote up.</h1>
                 </div>
+                <video id="video">
+                    <source src="videos/" type="video/mp4">
+                </video>
             </div>
-        </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/video.js"></script>
+            <div class="parties">
+                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+            </div>
+        
+        <?php include('partials/footer.php'); ?>
 
     </body>
 </html>
