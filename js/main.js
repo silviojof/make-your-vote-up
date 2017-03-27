@@ -34,10 +34,10 @@ $(document).ready(function(){
     }
 
 
-    $(".conservative").eq(0).html('<a href="party.php?name=conservative">conservative</a>');
-    $(".liberal").eq(0).html('<a href="liberal.php">liberal</a>');
-    $(".green").eq(0).html('<a href="green.php">green</a>');
-    $(".new-democratic").eq(0).html('<a href="new-democratic.php">new democratic</a>');
+    $(".conservative").eq(0).html('<a href="party.php?party=conservative">conservative</a>');
+    $(".liberal").eq(0).html('<a href="party.php?party=liberal">liberal</a>');
+    $(".green").eq(0).html('<a href="party.php?party=green">green</a>');
+    $(".new-democratic").eq(0).html('<a href="party.php?party=new-democratic">new democratic</a>');
 
     //
 

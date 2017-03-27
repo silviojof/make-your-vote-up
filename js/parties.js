@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'families', 'foreign', 'health', 'marijuana', 'energy'];
+  var $images = ['finance', 'taxes', 'infrastructure', 'jobs', 'family', 'foreign', 'health', 'marijuana', 'energy'];
 
 // modal box
   $( "#closeBtn" ).click(function() {
@@ -11,12 +11,34 @@ $(document).ready(function() {
   });
 
 // show/hide information
-$(document).ready(function(){
-    $(".show-and-hide").click(function(){
-        $('#bg-image').css('backgroundImage', "url('img/" + $images[$(this).data("value")] + ".jpg')");
-        $(".show").toggle();
+
+  (function(){
+    $('#bg-image').css('backgroundImage', "url('img/finance.jpg')");
+    $('.show ul').each(function(){
+      if($(this).data('proposal') == 'finance') {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
     });
+  })();
+
+  $(".show-and-hide").click(function(){
+      $('#bg-image').css('backgroundImage', "url('img/" + $images[$(this).data("value")] + ".jpg')");
+      let topic = $images[$(this).data('value')];
+
+      $('.show ul').each(function(){
+        if($(this).data('proposal') == topic) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+
   });
+
+
+
 
 
 

@@ -7,7 +7,7 @@
 .party-logo{
   display:block;
   margin-top:30px;
-  width:65%;
+  width:18rem;
   margin-left:auto;
   margin-right:auto;
 }
@@ -20,26 +20,61 @@
   text-align:center;
 }
 .representative-party{
-  width:55%;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
+  text-align: right;
+  img {
+    width:17rem;
+    margin-right: 2rem;
+  }
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    text-align: center;
+    img {
+      margin: 0;
+    }
+  }
 }
+.rep-bio {padding-right:7rem;}
+.representative-info {
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    p {
+      text-align: center;
+    }
+  }
+}
+
 .party-info{
   text-align:center;
-  margin-bottom:30px;
+  padding: 2rem 3rem;
+  p {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
 }
+
+.party-mps {
+  text-align: center;
+  h2 {
+    color: $mid-blue;
+    font-weight: 600;
+  }
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    padding: 2rem 3rem;
+  }
+  @media screen and (min-width: map-get($breakpoints, medium)) {
+    padding: 2rem 3rem;
+  }
+}
+
 .mp-btn {
   margin-left:auto;
   margin-right:auto;
-  border: solid 1px black;
-  background-color:#fff;
-  color: #000;
+  border: solid 1px $dark-grey;
+  background-color:$white-font;
+  color: $dark-grey;
   padding: 3px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 22px;
@@ -59,6 +94,7 @@
 .proposal-list-height{
   margin-top:150px;
   text-align: center;
+  padding:3.5rem;
 }
 .proposal {
     position:relative;
@@ -74,22 +110,52 @@
     font-size:16px;
   }
 }
+.proposal-info{
+  position:absolute;
+  height:50vh;
+  background:$mid-red;
+  color:$white-font;
+  padding:3rem;
+  width:100%;
+}
 .show-and-hide{
   z-index:25;
   cursor: pointer;
   margin-top:50px;
 }
-.show {
-    display: none;
-}
+
 /** Topics Menu **/
-.over-lay {
+.over-lay-liberal {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: $mid-blue;
+  background-color:$mid-red;
   opacity: 0.3;
   z-index:1;
+}
+.over-lay-conservative {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  z-index:1;
+  background-color:$mid-blue;
+}
+.over-lay-green {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  z-index:1;
+  background-color:$mid-green;
+}
+.over-lay-ndp {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  z-index:1;
+  background-color:$mid-orange;
 }
 .proposal-large {
   position:relative;
