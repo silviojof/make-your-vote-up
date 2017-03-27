@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="https://use.fontawesome.com/983b5cbe32.js"></script>
         <title>wendibranch</title>
     </head>
     <body>
@@ -24,7 +25,7 @@
                 <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
                 <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
             </div>
-        
+
         <?php include('partials/footer.php'); ?>
 
     </body>
