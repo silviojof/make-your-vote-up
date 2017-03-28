@@ -24,7 +24,7 @@
        if($numOfRows > 0) {
          while($row = mysqli_fetch_assoc($queryResult)) {
 
-   echo "<div class='row expanded small-collapse margin-correction margin-correction-bottom'>
+   echo "<div class='row expanded small-collapse'>
              <div class='party-page medium-12 large-6 column left-column-height'>
                <div class='representative'>
                   " . $row['party-logo'] . "
