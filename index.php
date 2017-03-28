@@ -25,8 +25,11 @@
                 <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
                 <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
             </div>
-
-        <?php include('partials/footer.php'); ?>
+        
+        <div class="h-footer">
+            <?php include('partials/footer.php'); ?>
+        </div>
+        
         <script type="text/javascript" src="js/video.js"></script>
         <!-- hola -->
 

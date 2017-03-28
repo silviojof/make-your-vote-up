@@ -17,7 +17,7 @@
 }
 
 // Selectors to add the overlay images
-//hola
+//hol
 
 @include breakpoint(medium up) {
 
@@ -151,10 +151,17 @@
         width:50%;
         top:0;
         right:0;
+        z-index:-1;
     }
     
     .party {
         height:100%;
+    }
+    
+    .h-footer{
+        position:fixed;
+        bottom:0;
+        width:100%;
     }
 }
 
