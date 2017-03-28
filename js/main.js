@@ -32,6 +32,7 @@ $(document).ready(function(){
 
         $(".party").filter(':eq('+i+'), :eq('+(i+4)+')').addClass(classes[randomNumber]);
         $(".party").eq(i+4).attr('data-party', classes[randomNumber]);
+        $(".party>p").eq(i).addClass($(".party>p").eq(i).parent().attr('data-party'));
     }
 
 
@@ -42,5 +43,10 @@ $(document).ready(function(){
 
     //
 
-
+    
+    $(".p-img").hover(function(){
+        $(this).animate({opacity:0.9})
+    }, function(){
+        $(this).animate({opacity:1})
+    });
 });

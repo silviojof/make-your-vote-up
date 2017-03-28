@@ -45,26 +45,49 @@
 
 }
 
+.p-img {
+    cursor:pointer;
+}
+
+.party-name {
+        background-color:white;
+    }
+
 [data-party] {
     padding:calcRem(40px) 0;
     text-align:center;
 }
 
-@include breakpoint(small only) {
-    [data-party="conservative"]:before {
+@include breakpoint(medium down) {
+    [data-party="conservative"]>p:before {
         content:"conservative";
     }
 
-    [data-party="liberal"]:before {
+    [data-party="liberal"]>p:before {
         content:"liberal";
     }
 
-    [data-party="green"]:before {
+    [data-party="green"]>p:before {
         content:"green";
     }
 
-    [data-party="new-democratic"]:before {
+    [data-party="new-democratic"]>p:before {
         content:"new democratic";
+    }
+}
+
+@include breakpoint(medium only){
+    .party {
+        position:relative;
+        padding:0;
+    }
+    
+    .party p {
+        position:absolute;
+        bottom:0;
+        margin:0;
+        width:100%;
+        padding:calcRem(40px);
     }
 }
 
@@ -80,7 +103,7 @@
     position:absolute;
     width:100%;
     height:100%;
-    background-color:black;
+    background-color:white;
 }
 
 // vide-bg css

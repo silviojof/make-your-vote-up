@@ -20,13 +20,14 @@
                 </video>
             </div>
             <div class="parties">
-                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
-                <div class="large-3 medium-6 small-12 columns party" data-party=""></div>
+                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
+                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
+                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
+                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
             </div>
 
         <?php include('partials/footer.php'); ?>
+        <script type="text/javascript" src="js/video.js"></script>
 
     </body>
 </html>
