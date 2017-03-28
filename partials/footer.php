@@ -40,5 +40,3 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/selectbox.js"></script>
 <script type="text/javascript" src="js/parties.js"></script>
-<script type="text/javascript" src="js/video.js"></script>
-
