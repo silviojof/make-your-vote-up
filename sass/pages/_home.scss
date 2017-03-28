@@ -16,6 +16,12 @@
   background-color: blue;
 }
 
+.page-header h1 {
+    color:$white;
+    text-transform:uppercase;
+    padding:calcRem(40px);
+}
+
 // Selectors to add the overlay images
 //hol
 
@@ -174,8 +180,8 @@
 }
 
 @include breakpoint (small only) {
-    .page-header {
-       
+    .page-header h1{
+       font-size:2.5rem;
     }
     
     #video-bg {
