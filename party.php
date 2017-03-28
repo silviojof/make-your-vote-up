@@ -25,10 +25,9 @@
          while($row = mysqli_fetch_assoc($queryResult)) {
 
    echo "<div class='row expanded small-collapse margin-correction margin-correction-bottom'>
-             <div class='party-page medium-12 large-6 column'>
+             <div class='party-page medium-12 large-6 column left-column-height'>
                <div class='representative'>
                   " . $row['party-logo'] . "
-                 <h2 style='color:" . $row['party-colour'] . "'>REPRESENTATIVE</h2>
                </div>
                <div class='row expanded small-collapse'>
                  <div class='small-12 medium-6 large-6 column representative-party'>

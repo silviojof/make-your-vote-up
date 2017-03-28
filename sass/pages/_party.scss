@@ -3,7 +3,7 @@
 @include breakpoint(small only) {
 
 }
-
+.left-column-height{height:80.5vh;}
 .party-logo{
   display:block;
   margin-top:30px;
@@ -11,13 +11,15 @@
   margin-left:auto;
   margin-right:auto;
 }
-.representative h2, p{
-  color:#000;
-}
-.representative h2{
+.representative {
+  h2, p{
+    color:#000;
+  }
+  h2{
   color:$mid-blue;
   font-weight:600;
   text-align:center;
+  }
 }
 .representative-party{
   text-align: right;
@@ -82,7 +84,7 @@
 }
 .party-background{
   background-color:$mid-blue;
-  height:50vh;
+  height:40vh;
   position:absolute;
   right:0;
 
@@ -99,7 +101,7 @@
 .proposal {
     position:relative;
     background-size:cover;
-    height:50vh;
+    height:40vh;
   h1{
   color:$mid-blue;
   text-align: center;
