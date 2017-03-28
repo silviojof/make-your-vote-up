@@ -5,25 +5,8 @@
 .main-nav {
     color:white;
     @media screen and (min-width: map-get($breakpoints, large)) {
-
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index:4;
-
+      height: 8vh;
     }
-}
-
-.margin-correction {
-  @media screen and (min-width: map-get($breakpoints, large)) {
-    margin-top: calcRem(90px);
-  }
-}
-
-.margin-correction-bottom {
-  @media screen and (min-width: map-get($breakpoints, large)) {
-    margin-bottom: calcRem(50px);
-  }
 }
 
 .site-nav img {

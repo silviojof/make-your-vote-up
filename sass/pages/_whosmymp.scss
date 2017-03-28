@@ -20,6 +20,9 @@
     text-transform: uppercase;
     color: $dark-grey;
   }
+  @media screen and (min-height: map-get($breakpoints, large)) {
+    height: 30vh;
+  }
 }
 
 .whos-container {
@@ -48,6 +51,7 @@
 
 .whos-mps {
   padding: 2rem;
+  overflow: scroll;
   span {
     margin-left: 0.5rem;
   }
@@ -59,5 +63,9 @@
     float: left;
     padding: 1rem;
     width: 18rem;
+  }
+  @media screen and (min-height: map-get($breakpoints, large)) {
+    overflow: scroll;
+    height: 57vh;
   }
 }
