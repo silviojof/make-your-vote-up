@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     //
 
-    
+
     $(".p-img").hover(function(){
         $(this).animate({opacity:0.9})
     }, function(){

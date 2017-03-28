@@ -41,10 +41,9 @@
                  " . $row['party-info'] . "
                </div>
                <div class='party-mps'>
-                 <h2 style='color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
-                 <!-- Trigger/Open The Modal -->
+                 <h2 style='margin:0; color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
                  <div id='overlayDiv' >
-                   <div id='modalDiv'>
+                   <div id='modalDiv' style='background-color:" . $row['party-colour'] . "'>
                      <button id='closeBtn'>Close</button>
                    </div>
                  </div>
@@ -96,7 +95,7 @@
                      </div>
                    </div>
                  </div>
-                    <div class='show proposal-info'>
+                    <div class='show proposal-info' style='background-color:" . $row['party-colour'] . "'>
                        <ul data-proposal='finance'>" .
                        $row['finance']. "
                        </ul>

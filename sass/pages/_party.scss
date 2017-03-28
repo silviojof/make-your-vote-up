@@ -3,7 +3,13 @@
 @include breakpoint(small only) {
 
 }
-.left-column-height{height:80.5vh;}
+.body-margin-top {
+  margin-top:8vh;
+}
+.body-margin-bottom {
+  margin-bottom:5vh;
+}
+.left-column-height{height:87vh;}
 .party-logo{
   display:block;
   margin-top:30px;
@@ -84,24 +90,24 @@
 }
 .party-background{
   background-color:$mid-blue;
-  height:40vh;
+  height:37vh;
   position:absolute;
   right:0;
 
 }
 // modal box for mp
 #overlayDiv { position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.6); width:100%; height:100%; z-index:10; display:none; }
-#modalDiv { position:fixed; width:400px; height:280px; background-color:blue; left:50%; margin-left:-200px; top:50%; margin-top:-140px; z-index:11;}
+#modalDiv { position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); width:800px; height:560px; display:block; margin: 0 auto; z-index:11;}
 // ___________________________________
 .proposal-list-height{
-  margin-top:150px;
+  margin-top:9vh;
   text-align: center;
   padding:3.5rem;
 }
 .proposal {
     position:relative;
     background-size:cover;
-    height:40vh;
+    height:46vh;
   h1{
   color:$mid-blue;
   text-align: center;
@@ -113,12 +119,9 @@
   }
 }
 .proposal-info{
-  position:absolute;
-  height:50vh;
-  background:$mid-red;
+  height:41vh;
   color:$white-font;
-  padding:3rem;
-  width:100%;
+  padding:3rem 6.5rem;
 }
 .show-and-hide{
   z-index:25;
