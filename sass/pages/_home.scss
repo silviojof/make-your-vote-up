@@ -60,6 +60,14 @@
 }
 
 @include breakpoint(medium down) {
+    [data-party]>p{
+        font-family: $text-font-hero;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
     [data-party="conservative"]>p:before {
         content:"conservative";
     }
