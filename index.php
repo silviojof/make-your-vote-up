@@ -28,6 +28,7 @@
 
         <?php include('partials/footer.php'); ?>
         <script type="text/javascript" src="js/video.js"></script>
+        <!-- hola -->
 
     </body>
 </html>
