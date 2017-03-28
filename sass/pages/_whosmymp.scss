@@ -20,7 +20,7 @@
     text-transform: uppercase;
     color: $dark-grey;
   }
-  @media screen and (min-height: map-get($breakpoints, large)) {
+  @media screen and (min-width: map-get($breakpoints, large)) {
     height: 30vh;
   }
 }
@@ -51,7 +51,6 @@
 
 .whos-mps {
   padding: 2rem;
-  overflow: scroll;
   span {
     margin-left: 0.5rem;
   }
@@ -64,8 +63,29 @@
     padding: 1rem;
     width: 18rem;
   }
-  @media screen and (min-height: map-get($breakpoints, large)) {
-    overflow: scroll;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    overflow: auto;
     height: 57vh;
   }
+}
+
+.whos-mps::-webkit-scrollbar {
+    width: 1rem;
+    padding: 0.3rem;
+}
+
+/* Track */
+.whos-mps::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 0.5rem;;
+}
+
+/* Handle */
+.whos-mps::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;;
+    background: rgba(68, 68, 68, 0.8);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.whos-mps::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(68, 68, 68, 0.4);
 }

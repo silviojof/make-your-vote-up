@@ -52,7 +52,7 @@
 
         </ul>
       </div>
-      <div class="whos-mps">
+      <div class="whos-mps clearfix">
         <ul id="whos-mps">
 
         </ul>
