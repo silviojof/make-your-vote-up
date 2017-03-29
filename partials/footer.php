@@ -4,10 +4,11 @@
     <a href="index.php"><img src="./img/logo/logo4.svg" alt="make-your-vote-up logo"></a>
     <h2>Are you enjoying?</h2>
     <p>Why not sign up for email updates? I promise I won't spam you, and I'll only send out an email when I've written something truly worth reading.</p>
-    <form class="form-modal" action="" method="post">
-      <input type="text" name="email" placeholder="Email Address">
+    <form class="form-modal" id="form-modal" action="mail-data.php" method="post">
+      <input type="text" id="form-email" name="email" placeholder="Email Address">
       <button type="submit" name="button">Subscribe</button>
     </form>
+    <div id="form-messages"></div>
   </div>
 </div>
 
@@ -40,3 +41,4 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/selectbox.js"></script>
 <script type="text/javascript" src="js/parties.js"></script>
+<script type="text/javascript" src="js/mail.js"></script>
