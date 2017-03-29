@@ -15,7 +15,7 @@
       }
     } else {
       // If there is no data on table
-      echo "<h3>" .$party . " has no members of parliament in " . $provinceArr[$province] . " to display</h3>";
+      echo "<h4>" .$party . " has no members of parliament in " . $provinceArr[$province] . " to display</h4>";
     }
 
   }

@@ -36,6 +36,8 @@
   img {
     width:17rem;
     margin-right: 2rem;
+    border-radius:50%;
+    border:solid 1px black;
   }
   @media screen and (max-width: map-get($breakpoints, medium)) {
     text-align: center;
