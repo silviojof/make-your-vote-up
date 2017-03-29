@@ -16,7 +16,14 @@
   background-color: blue;
 }
 
+.page-header h1 {
+    color:$white;
+    text-transform:uppercase;
+    padding:calcRem(40px);
+}
+
 // Selectors to add the overlay images
+//hol
 
 @include breakpoint(medium up) {
 
@@ -45,20 +52,15 @@
 
 }
 
-.p-img {
-    cursor:pointer;
-}
-
-.party-name {
-        background-color:white;
-    }
-
-[data-party] {
-    padding:calcRem(40px) 0;
-    text-align:center;
-}
-
 @include breakpoint(medium down) {
+    [data-party]>p{
+        font-family: $text-font-hero;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
     [data-party="conservative"]>p:before {
         content:"conservative";
     }
@@ -76,19 +78,17 @@
     }
 }
 
-@include breakpoint(medium only){
-    .party {
-        position:relative;
-        padding:0;
+.p-img {
+    cursor:pointer;
+}
+
+.party-name {
+        background-color:white;
     }
-    
-    .party p {
-        position:absolute;
-        bottom:0;
-        margin:0;
-        width:100%;
-        padding:calcRem(40px);
-    }
+
+[data-party] {
+    padding:calcRem(40px) 0;
+    text-align:center;
 }
 
 .page-header {
@@ -150,16 +150,47 @@
         width:50%;
         top:0;
         right:0;
+        z-index:-1;
     }
     
     .party {
         height:100%;
     }
+    
+    .h-footer{
+        position:fixed;
+        bottom:0;
+        width:100%;
+    }
+}
+
+@include breakpoint(medium only){
+    .party {
+        position:relative;
+        padding:0;
+    }
+    
+    .party p {
+        position:absolute;
+        bottom:0;
+        margin:0;
+        width:100%;
+        padding:calcRem(40px);
+    }
+    
+    #video-bg {
+        height:calcRem(600px);
+    }
+    
+    #video-bg video {
+        height:100%;
+        width:auto;
+    }
 }
 
 @include breakpoint (small only) {
-    .page-header {
-       
+    .page-header h1{
+       font-size:2.5rem;
     }
     
     #video-bg {

@@ -28,6 +28,8 @@ $(document).ready(function() {
       let val = $(this).val();
       $('.whos-topic').css('backgroundImage', "url('img/" + $provincesImg[val] + ".jpg')");
 			$('.whos-topic').find('h2').text($provincesName[val - 1]);
+			let $province = $provincesImg[val -1];
+			getAjaxMp($province);
     });
 
 		//Set background images for topics on desktop version
@@ -138,9 +140,28 @@ $(document).ready(function() {
 			$($id).click(function(){
 				$('.whos-topic').css('backgroundImage', "url('img/" + val + ".jpg')");
 				$('.whos-topic').find('h2').text($provincesName[i]);
-				console.log(val);
 				getAjaxMp(val);
-			})
+
+
+			});
+		});
+
+		//get buttons to filter Maps
+
+		$('#whos-mps-filter').delegate('li', 'click',function(){
+			let $party = $(this).data('party-filter');
+			$('#whos-mps-filter li').removeClass('filter-active');
+			$(this).addClass('filter-active');
+			$('#whos-mps li').css('display', 'inline-block');
+			$('#whos-mps li').each(function(item){
+				let $partyLi = $(this).data('party-name');
+				if($partyLi == $party || $party == "all") {
+					$(this).css('display', 'inline-block');
+				} else {
+					$(this).css('display', 'none');
+				}
+			});
+			return false;
 		});
 
 
@@ -204,6 +225,33 @@ function getAjaxMp(province) {
 	  success: function(data) {
 			$('#whos-mps').html(data);
 			$('#whos-mps').attr('data-province', province);
+			var $parties = ['all'];
+			$('#whos-mps li').each(function(val, i){
+				let name = $(this).data('party-name');
+
+				if($parties.indexOf(name) < 0) {
+					$parties.push(name);
+				}
+			});
+			$('#whos-mps-filter').html('<li data-party-filter="all" class="filter-active">All</li>');
+			$.each($parties, function(index, val){
+				var item = "";
+				switch(val) {
+					case "liberal":
+						item = "<li data-party-filter='liberal'>Liberal</li>";
+						break;
+					case "conservative":
+						item = "<li data-party-filter='conservative'>Conservative</li>";
+						break;
+					case "new-democratic":
+						item = "<li data-party-filter='new-democratic'>New Democratic</li>";
+						break;
+					case "green":
+						item = "<li data-party-filter='green'>Green</li>";
+				}
+				$('#whos-mps-filter').append(item);
+			});
+
 		}
 	}); // end ajax call
 }

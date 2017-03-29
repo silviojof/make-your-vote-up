@@ -48,14 +48,14 @@
     <div class="medium-12 large-6 column whos-right-side">
       <div class="whos-topic">
         <h2>Alberta</h2>
-        <ul>
+        <ul id="whos-mps-filter">
 
         </ul>
       </div>
       <div class="whos-mps clearfix">
-        <ul id="whos-mps">
+          <ul id="whos-mps">
 
-        </ul>
+          </ul>
       </div>
     </div>
 
