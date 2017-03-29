@@ -6,10 +6,26 @@ $(document).ready(function() {
     $("#overlayDiv").fadeOut(1000);
   });
 
+
   $( ".mp-btn" ).click(function() {
     $("#overlayDiv").fadeIn(1000);
-  });
+    let dataMp = $(this).data("mp");
+    let dataParty = $(this).data("mp-party");
+    mpAjax(dataMp,dataParty);
 
+  });
+  function mpAjax(province,party){
+    let url= "mp-data.php?province=" + province + "&party=" + party;
+    $.ajax({
+      url: url,
+      method: "post",
+      success: function(data){
+        $("#mp-info").html(data);
+      }
+
+    });
+
+  }
 // show/hide information
 
   (function(){

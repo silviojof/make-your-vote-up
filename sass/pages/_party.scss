@@ -9,7 +9,10 @@
 .body-margin-bottom {
   margin-bottom:5vh;
 }
-.left-column-height{height:87vh;}
+.left-column-height{
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    height:87vh;}
+  }
 .party-logo{
   display:block;
   margin-top:30px;
@@ -17,6 +20,7 @@
   margin-left:auto;
   margin-right:auto;
 }
+.image-resize{width:15rem;}
 .representative {
   h2, p{
     color:#000;
@@ -42,9 +46,14 @@
 }
 .rep-bio {padding-right:7rem;}
 .representative-info {
+  margin-top:3.5rem;
   @media screen and (max-width: map-get($breakpoints, medium)) {
     p {
       text-align: center;
+      padding:0 2rem 0 2rem;
+    }
+    h3{
+      text-align:center;
     }
   }
 }
@@ -93,14 +102,78 @@
   height:37vh;
   position:absolute;
   right:0;
-
 }
 // modal box for mp
-#overlayDiv { position:fixed; top:0px; left:0px; background-color:rgba(0,0,0,0.6); width:100%; height:100%; z-index:10; display:none; }
-#modalDiv { position:absolute; top: 50%; left:50%; transform: translate(-50%,-50%); width:800px; height:560px; display:block; margin: 0 auto; z-index:11;}
+#closeBtn i{
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: #444444;
+  color: #b8b8b8;
+  border-radius: 50%;
+  height: 1.6rem;
+  width: 1.6rem;
+  text-align: center;
+  line-height: 1.5rem;
+  padding:4rem;
+  cursor: pointer;
+}
+#overlayDiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalDiv {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align:left;
+  color:$white-font;
+  background-color: $white-font;
+  height:34rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  max-width: calcRem(800px);
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: $text-font-hero;
+    color: $white-font;
+  }
+
+  @media screen and (min-width: map-get($breakpoints,medium)) {
+    padding: 3rem;
+  }
+}
+.mps-info {
+  padding: 1rem;
+  font-size:16px;
+  overflow: auto;
+  max-height: 50rem;
+  li {
+    float: left;
+    width: 13rem;
+  }
+  @media screen and (min-width: map-get($breakpoints, large)) {
+    overflow: auto;
+  }
+}
 // ___________________________________
 .proposal-list-height{
-  margin-top:9vh;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+  margin-top:9vh;}
   text-align: center;
   padding:3.5rem;
 }
@@ -119,7 +192,8 @@
   }
 }
 .proposal-info{
-  height:41vh;
+  @media screen and (min-width: map-get($breakpoints, large)) {
+  height:41vh;}
   color:$white-font;
   padding:3rem 6.5rem;
 }
@@ -165,4 +239,30 @@
 .proposal-large {
   position:relative;
   z-index:2;
+}
+/** Scroll Bars **/
+#mp-info {
+  overflow: auto !important;
+  max-height: 28rem;
+}
+
+
+#mp-info::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#mp-info::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+/* Handle */
+#mp-info::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(68, 68, 68, 0.8);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#mp-info::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(68, 68, 68, 0.4);
 }

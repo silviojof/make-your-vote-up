@@ -42,18 +42,27 @@
                </div>
                <div class='party-mps'>
                  <h2 style='margin:0; color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
-                 <div id='overlayDiv' >
+                 <div id='overlayDiv'>
                    <div id='modalDiv' style='background-color:" . $row['party-colour'] . "'>
-                     <button id='closeBtn'>Close</button>
+                    <i class='fa fa-times' id='closeBtn' style='float:right;' aria-hidden='true'></i>
+                     <div id='mp-info' class='mps-info'></div>
                    </div>
                  </div>
-                 <button data-mp='qb' class='mp-btn'>QB</button>
-                 <button data-mp='nl' class='mp-btn'>NL</button>
-                 <button data-mp='on' class='mp-btn'>ON</button>
-                 <button data-mp='bc' class='mp-btn'>BC</button>
-                 <button data-mp='nu' class='mp-btn'>NU</button>
-                 <button data-mp='qb' class='mp-btn'>AL</button>
-                 <button data-mp='pi' class='mp-btn'>PI</button>
+                 <button data-mp='ab' data-mp-party=". $row['name'] ." class='mp-btn'>AB</button>
+                 <button data-mp='bc' data-mp-party=". $row['name'] ." class='mp-btn'>BC</button>
+                 <button data-mp='mb' data-mp-party=". $row['name'] ." class='mp-btn'>MB</button>
+                 <button data-mp='nb' data-mp-party=". $row['name'] ." class='mp-btn'>NB</button>
+                 <button data-mp='pi' data-mp-party=". $row['name'] ." class='mp-btn'>PI</button>
+                 <button data-mp='sk' data-mp-party=". $row['name'] ." class='mp-btn'>SK</button>
+                 <button data-mp='qb' data-mp-party=". $row['name'] ." class='mp-btn'>QB</button>
+                 <button data-mp='nl' data-mp-party=". $row['name'] ." class='mp-btn'>NL</button>
+                 <button data-mp='on' data-mp-party=". $row['name'] ." class='mp-btn'>ON</button>
+                 <button data-mp='nu' data-mp-party=". $row['name'] ." class='mp-btn'>NU</button>
+                 <button data-mp='nt' data-mp-party=". $row['name'] ." class='mp-btn'>NT</button>
+                 <button data-mp='nb' data-mp-party=". $row['name'] ." class='mp-btn'>NB</button>
+                 <button data-mp='pe' data-mp-party=". $row['name'] ." class='mp-btn'>PE</button>
+                 <button data-mp='ns' data-mp-party=". $row['name'] ." class='mp-btn'>NS</button>
+
                </div>
              </div>
              <div class='medium-12 large-6 column'>
