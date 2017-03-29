@@ -41,10 +41,10 @@
                  " . $row['party-info'] . "
                </div>
                <div class='party-mps'>
-                 <h2 style='margin:0; color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
+                 <h2 style='color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
                  <div id='overlayDiv'>
                    <div id='modalDiv' style='background-color:" . $row['party-colour'] . "'>
-                    <i class='fa fa-times' id='closeBtn' style='float:right;' aria-hidden='true'></i>
+                    <i class='fa fa-times' id='closeBtn' style='float:right; margin-top:-2.5rem; margin-right:-2.2rem;' aria-hidden='true'></i>
                      <div id='mp-info' class='mps-info'></div>
                    </div>
                  </div>
