@@ -68,30 +68,8 @@
              <div class='medium-12 large-6 column'>
                  <div class='proposal' id='bg-image'>
                    <div class='hide-for-small-only " . $row['bg-opacity-colour'] . "'></div>
-                   <div class='hide-for-medium'>
                      <h1 style='color: " . $row['party-colour'] . "'>PROPOSALS</h1>
-                     <div class='comp-selectbox'>
-                       <div class='selectBox'>
-                           <input type='hidden' value='1' class='price_values'/>
-                           <span class='selected'></span>
-                           <span class='selectArrow'>&#9660</span>
-                           <ul class='selectOptions' >
-                               <li class='selectOption' data-value='0'>Public Finance</li>
-                               <li class='selectOption' data-value='1'>Taxation and Economy</li>
-                               <li class='selectOption' data-value='2'>Infra-structure</li>
-                               <li class='selectOption' data-value='3'>Jobs</li>
-                               <li class='selectOption' data-value='4'>Families</li>
-                               <li class='selectOption' data-value='5'>Foreign Policy</li>
-                               <li class='selectOption' data-value='6'>Health</li>
-                               <li class='selectOption' data-value='7'>Marijuana Legalisation</li>
-                               <li class='selectOption' data-value='8'>Energy</li>
-                           </ul>
-                       </div>
-                     </div>
-                   </div>
                    <div class='hide-for-small-only column proposal-large'>
-                    <h1 style='color: " . $row['party-colour'] . "'>PROPOSALS</h1>
-                     <div class='hide-for-small-only proposal-list-height column'>
                        <span class='show-and-hide proposal-list' data-value='0'>Public Finance |</span>
                        <span class='show-and-hide proposal-list' data-value='1'>Taxation and Economy | </span>
                        <span class='show-and-hide proposal-list' data-value='2'>Infra-structure | </span>
@@ -101,7 +79,24 @@
                        <span class='show-and-hide proposal-list' data-value='6'>Health | </span>
                        <span class='show-and-hide proposal-list' data-value='7'>Marijuana Legalisation | </span>
                        <span class='show-and-hide proposal-list' data-value='8'>Energy</span>
-                     </div>
+                   </div>
+                 </div>
+                 <div class='comp-selectbox hide-for-medium'>
+                   <div class='selectBox'>
+                       <input type='hidden' value='1' class='price_values' id='party-selectbox'/>
+                       <span class='selected'></span>
+                       <span class='selectArrow'>&#9660</span>
+                       <ul class='selectOptions' >
+                           <li class='selectOption' data-value='0'>Public Finance</li>
+                           <li class='selectOption' data-value='1'>Taxation and Economy</li>
+                           <li class='selectOption' data-value='2'>Infra-structure</li>
+                           <li class='selectOption' data-value='3'>Jobs</li>
+                           <li class='selectOption' data-value='4'>Families</li>
+                           <li class='selectOption' data-value='5'>Foreign Policy</li>
+                           <li class='selectOption' data-value='6'>Health</li>
+                           <li class='selectOption' data-value='7'>Marijuana Legalisation</li>
+                           <li class='selectOption' data-value='8'>Energy</li>
+                       </ul>
                    </div>
                  </div>
                     <div class='show proposal-info' style='background-color:" . $row['party-colour'] . "'>

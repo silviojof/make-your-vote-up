@@ -53,9 +53,19 @@ $(document).ready(function() {
 
   });
 
+  $('#party-selectbox').change(function(){
+    let val = $(this).val();
+    $('#bg-image').css('backgroundImage', "url('img/" + $images[val] + ".jpg')");
+    let topic = $images[val];
 
-
-
+    $('.show ul').each(function(){
+      if($(this).data('proposal') == topic) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
 
 
 
