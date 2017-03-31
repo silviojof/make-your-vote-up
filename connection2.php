@@ -7,7 +7,7 @@
 			// Grab info from Config File
 			// $config = parse_ini_file('config.ini');
 			// And estabilish a connection
-			$conn = mysqli_connect('localhost', 'root', '', 'my_db');
+			$conn = mysqli_connect('localhost', 'silviojo_myvu', '4DASZ9WermWC', 'silviojo_myvu_db');
 
 			// Set the timezone
       date_default_timezone_set('Canada/Pacific');
