@@ -1,5 +1,5 @@
 <?php
-  require('connection.php');
+  require('connection2.php');
 
   function comparisson($name, $topic) {
     $query = "SELECT * FROM comparison_tb WHERE name=" . "'" . $name . "'";
@@ -40,7 +40,7 @@
       $topicShow = $_GET['topic'];
       comparisson("green", $topicShow);
       comparisson("conservative", $topicShow);
-      comparisson("democratic", $topicShow);
+      comparisson("newdemocratic", $topicShow);
       comparisson("liberal", $topicShow);
     }
 

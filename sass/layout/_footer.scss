@@ -29,18 +29,128 @@
   i, span {
     color: $light-grey;
     padding: 0 0.5rem;
-    &:hover {
-      color: $mid-grey;
-      cursor: pointer;
-    }
   }
   @media screen and (min-width: map-get($breakpoints, large)) {
 
   }
 }
 
-#subscribe-open {
+.footer-social {
+    @media screen and (max-width: map-get($breakpoints, medium)) {
+      text-align: center;
+    }
+}
+
+#subscribe-open, #vote-open {
   display: inline-block;
+  &:hover {
+    i, span {
+      color: $mid-grey;
+      cursor: pointer;
+    }
+  }
+  margin-left: 2rem;
+  @media screen and (max-width: map-get($breakpoints, medium)) {
+    display: block;
+    margin: 0;
+    text-align: center;
+    margin: 1rem;
+  }
+}
+
+.svg-box {
+  position: relative;
+  width: calcRem(300px);
+  margin: 0 auto;
+  svg {
+    box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+  }
+}
+
+.party-tag {
+  width: calcRem(300px);
+  margin: 0 auto;
+  padding: 0 1.9rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -1.1rem;
+  z-index: 9999;
+  span {
+    width: 2.2rem;
+    height: 2.2rem;
+    text-align: center;
+    line-height: 1.8;
+    font-family: $text-font-hero;
+    color: $white-font;
+    font-weight: 600;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  }
+  span:nth-child(1) {background-color: $mid-green;}
+  span:nth-child(2) {background-color: $mid-red;}
+  span:nth-child(3) {background-color: $mid-orange;}
+  span:nth-child(4) {background-color: $mid-blue;}
+}
+
+.vote-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-modal-box {
+  background-color: $white-font;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.3rem;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  max-width: calcRem(800px);
+  #bar-conservative {fill: $mid-blue};
+  #bar-democratic {fill: $mid-orange};
+  #bar-liberal {fill: $mid-red};
+  #bar-green {fill: $mid-green};
+  p, h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: $text-font-hero;
+    color: $dark-grey;
+  }
+  svg {
+    display: block;
+    margin: 0 auto;
+    width: calcRem(300px);
+    height: calcRem(200px);
+  }
+  i {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: $dark-grey;
+    color: $light-grey;
+    border-radius: 50%;
+    height: 1.6rem;
+    width: 1.6rem;
+    text-align: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+  }
+  @media screen and (min-width: map-get($breakpoints,medium)) {
+    padding: 3rem;
+  }
 }
 
 .email-modal {

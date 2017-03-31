@@ -1,11 +1,11 @@
 <?php
-  require('connection.php');
+  require('connection2.php');
 
   function getMyMp($province) {
     $query = "SELECT * FROM mp_list_tb WHERE province=" . "'" . $province . "'";
     $queryResult = mysqli_query(connect_db(), $query);
     $numOfRows = mysqli_num_rows($queryResult);
-    $colors = array('liberal'=> 'rgb(135, 1, 15)', 'conservative'=> 'rgb(12, 86, 128)', 'green'=>'rgb(17, 94, 17)', 'new-democratic'=>'rgb(174, 70, 5)');
+    $colors = array('liberal'=> 'rgb(135, 1, 15)', 'conservative'=> 'rgb(12, 86, 128)', 'green'=>'rgb(17, 94, 17)', 'newdemocratic'=>'rgb(174, 70, 5)');
     if($numOfRows > 0) {
       while($row = mysqli_fetch_assoc($queryResult)) {
 

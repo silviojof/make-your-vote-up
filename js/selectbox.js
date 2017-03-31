@@ -3,6 +3,7 @@
 $(document).ready(function() {
 
 
+
 		enableSelectBoxes();
 
 		//Use ajax function to load content for first time and change overlay for default topic
@@ -113,6 +114,10 @@ $(document).ready(function() {
 			}
 		});
 
+
+
+
+
 		// before reloading, update localStorage Object with current data
 		$(window).on('beforeunload', function(){
 			localStorage.voteStatus = JSON.stringify($voteStatusParsed);
@@ -165,16 +170,39 @@ $(document).ready(function() {
 		});
 
 
-		//Modal Subscribe
-		$('#modal-close').click(function(){
+		//Modal Subscribe e Votes
+		$('.modal-close').click(function(){
+			$('.vote-modal').css('display', 'none');
 			$('.email-modal').css('display', 'none');
-			console.log('clicked');
+		});
+
+		$('.email-modal').click(function(){
+			$('.email-modal').css('display', 'none');
+		});
+
+		$('.vote-modal').click(function(){
+			$('.vote-modal').css('display', 'none');
 		});
 
 		$('#subscribe-open').click(function(){
-			console.log('subs clicked');
 			$('.email-modal').css('display', 'flex');
 		});
+
+		// Calculating votes:
+		$('#vote-open').click(function(){
+			$('.vote-modal').css('display','flex');
+			let $green = localStorage['green'] * 20;
+			let $liberal = localStorage['liberal'] * 20;
+
+			let $democratic = localStorage['newdemocratic'] * 20;
+			let $conservative = localStorage['conservative'] * 20;
+			console.log($democratic);
+			$('#bar-green').animate({'height': $green}, 'slow');
+			$('#bar-liberal').animate({'height': $liberal}, 'slow');
+			$('#bar-democratic').animate({'height': $democratic}, 'slow');
+			$('#bar-conservative').animate({'height': $conservative}, 'slow');
+		});
+
 
 
 
@@ -206,7 +234,7 @@ function getAjax(topicName) {
 				});
 			}
 			//Grab the number of votes on localStorage and display it
-			var $parties = ['green', 'conservative', 'democratic', 'liberal'];
+			var $parties = ['green', 'conservative', 'newdemocratic', 'liberal'];
 			$.each( $parties, function(index, val){
 				$('#comp-vote-' + val).text(localStorage[val]);
 			});
@@ -243,8 +271,8 @@ function getAjaxMp(province) {
 					case "conservative":
 						item = "<li data-party-filter='conservative'>Conservative</li>";
 						break;
-					case "new-democratic":
-						item = "<li data-party-filter='new-democratic'>New Democratic</li>";
+					case "newdemocratic":
+						item = "<li data-party-filter='newdemocratic'>New Democratic</li>";
 						break;
 					case "green":
 						item = "<li data-party-filter='green'>Green</li>";

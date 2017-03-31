@@ -39,7 +39,7 @@ $(document).ready(function(){
     $(".conservative").eq(0).html('<a href="party.php?party=conservative">conservative</a>');
     $(".liberal").eq(0).html('<a href="party.php?party=liberal">liberal</a>');
     $(".green").eq(0).html('<a href="party.php?party=green">green</a>');
-    $(".new-democratic").eq(0).html('<a href="party.php?party=new-democratic">new democratic</a>');
+    $(".new-democratic").eq(0).html('<a href="party.php?party=newdemocratic">new democratic</a>');
 
     //
 
