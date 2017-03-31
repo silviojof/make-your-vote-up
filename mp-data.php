@@ -3,6 +3,7 @@
 
   function getMp($province, $party) {
     $provinceArr = array("bc"=>"British Columbia","ab"=>"Alberta","mb"=>"Manitoba", "sk"=>"Saskatchewan","on"=>"Ontario","qb"=>"Quebec","ns"=>"Nova Scotia","nb"=>"New Brunswick","pi"=>"Prince Edward Island","nl"=>"Newfoundland and Labrador","nu"=>"Nunavut","yt"=>"Yukon","nt"=>"Northwest Territories");
+    $partyArr = array("liberal"=>"Liberal","conservative"=>"Conservative","new-democratic"=>"New Democratic", "green"=>"Green");
     $query = "SELECT * FROM mp_list_tb WHERE province='" . $province . "' AND party= '" . $party . "'";
     $queryResult = mysqli_query(connect_db(), $query);
     $numOfRows = mysqli_num_rows($queryResult);
@@ -15,7 +16,7 @@
       }
     } else {
       // If there is no data on table
-      echo "<h4>" .$party . " has no members of parliament in " . $provinceArr[$province] . " to display</h4>";
+      echo "<h3>" . $partyArr[$party] . " has no members of parliament in " . $provinceArr[$province] . " to display</h3>";
     }
 
   }
