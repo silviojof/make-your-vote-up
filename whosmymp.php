@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <script src="https://use.fontawesome.com/983b5cbe32.js"></script>
 
-  <title>wendibranch</title>
+  <title>Make Your Vote Up</title>
 </head>
 <body>
   <?php

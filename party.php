@@ -44,7 +44,7 @@
                  <h2 style='color: " . $row['party-colour'] . "'>MEMBERS OF PARLIAMENT</h2>
                  <div id='overlayDiv'>
                    <div id='modalDiv' style='background-color:" . $row['party-colour'] . "'>
-                    <i class='fa fa-times' id='closeBtn' style='float:right; margin-top:-2.5rem; margin-right:-2.2rem;' aria-hidden='true'></i>
+                    <i class='fa fa-times' id='closeBtn' style='float:right; margin-top:-2rem; margin-right:-1.8rem;' aria-hidden='true'></i>
                      <div id='mp-info' class='mps-info'></div>
                    </div>
                  </div>
@@ -52,7 +52,6 @@
                  <button data-mp='bc' data-mp-party=". $row['name'] ." class='mp-btn'>BC</button>
                  <button data-mp='mb' data-mp-party=". $row['name'] ." class='mp-btn'>MB</button>
                  <button data-mp='nb' data-mp-party=". $row['name'] ." class='mp-btn'>NB</button>
-                 <button data-mp='pi' data-mp-party=". $row['name'] ." class='mp-btn'>PI</button>
                  <button data-mp='sk' data-mp-party=". $row['name'] ." class='mp-btn'>SK</button>
                  <button data-mp='qb' data-mp-party=". $row['name'] ." class='mp-btn'>QB</button>
                  <button data-mp='nl' data-mp-party=". $row['name'] ." class='mp-btn'>NL</button>
@@ -70,14 +69,14 @@
                    <div class='hide-for-small-only " . $row['bg-opacity-colour'] . "'></div>
                      <h1 style='color: " . $row['party-colour'] . "'>PROPOSALS</h1>
                    <div class='hide-for-small-only column proposal-large'>
-                       <span class='show-and-hide proposal-list' data-value='0'>Public Finance |</span>
-                       <span class='show-and-hide proposal-list' data-value='1'>Taxation and Economy | </span>
-                       <span class='show-and-hide proposal-list' data-value='2'>Infra-structure | </span>
-                       <span class='show-and-hide proposal-list' data-value='3'>Jobs | </span>
-                       <span class='show-and-hide proposal-list' data-value='4'>Families | </span>
-                       <span class='show-and-hide proposal-list' data-value='5'>Foreign Policy | </span>
-                       <span class='show-and-hide proposal-list' data-value='6'>Health | </span>
-                       <span class='show-and-hide proposal-list' data-value='7'>Marijuana Legalisation | </span>
+                       <span class='show-and-hide proposal-list' data-value='0'>Public Finance</span>
+                       <span class='show-and-hide proposal-list' data-value='1'>Taxation and Economy</span>
+                       <span class='show-and-hide proposal-list' data-value='2'>Infra-structure</span>
+                       <span class='show-and-hide proposal-list' data-value='3'>Jobs</span>
+                       <span class='show-and-hide proposal-list' data-value='4'>Families</span>
+                       <span class='show-and-hide proposal-list' data-value='5'>Foreign Policy</span>
+                       <span class='show-and-hide proposal-list' data-value='6'>Health</span>
+                       <span class='show-and-hide proposal-list' data-value='7'>Marijuana Legalisation</span>
                        <span class='show-and-hide proposal-list' data-value='8'>Energy</span>
                    </div>
                  </div>
