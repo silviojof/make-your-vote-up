@@ -7,11 +7,17 @@
     $numOfRows = mysqli_num_rows($queryResult);
     if($numOfRows > 0) {
       $message;
-      while($row = mysqli_fetch_assoc($queryResult)) {
 
+
+      while($row = mysqli_fetch_assoc($queryResult)) {
+        if($name === "newdemocratic") {
+          $nameUpper = "new democratic";
+        } else {
+          $nameUpper = $name;
+        }
       $message = "<div class='small-12 medium-6 large-3 column comp-party' id='comp-". $name . "'>
           <header class='comp-header'>
-            <h2>" . $name . "<span class='comp-vote' id='comp-vote-" . $name . "'>0</span></h2>
+            <h2>" . $nameUpper . "<span class='comp-vote' id='comp-vote-" . $name . "'>0</span></h2>
           </header>
           <div class='comp-body'>
             <div class='comp-text'>

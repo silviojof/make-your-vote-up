@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-
+		localStorage.clear();
 
 		enableSelectBoxes();
 
@@ -174,6 +174,7 @@ $(document).ready(function() {
 		$('.modal-close').click(function(){
 			$('.vote-modal').css('display', 'none');
 			$('.email-modal').css('display', 'none');
+			$('.svg-box').show();
 		});
 
 		$('.email-modal').click(function(){
@@ -182,26 +183,55 @@ $(document).ready(function() {
 
 		$('.vote-modal').click(function(){
 			$('.vote-modal').css('display', 'none');
+			$('.svg-box').show();
 		});
 
 		$('#subscribe-open').click(function(){
 			$('.email-modal').css('display', 'flex');
 		});
 
+
 		// Calculating votes:
 		$('#vote-open').click(function(){
 			$('.vote-modal').css('display','flex');
-			let $green = localStorage['green'] * 20;
-			let $liberal = localStorage['liberal'] * 20;
+			let $green = localStorage['green'] ? localStorage['green'] * 20 : 0;
+			let $liberal = localStorage['liberal'] ? localStorage['liberal'] * 20 : 0;
+			let $democratic = localStorage['newdemocratic'] ? localStorage['newdemocratic'] * 20 : 0;
+			let $conservative = localStorage['conservative'] ? localStorage['conservative'] * 20 : 0;
 
-			let $democratic = localStorage['newdemocratic'] * 20;
-			let $conservative = localStorage['conservative'] * 20;
-			console.log($democratic);
 			$('#bar-green').animate({'height': $green}, 'slow');
 			$('#bar-liberal').animate({'height': $liberal}, 'slow');
 			$('#bar-democratic').animate({'height': $democratic}, 'slow');
 			$('#bar-conservative').animate({'height': $conservative}, 'slow');
+
+			var $votesArray = [$green, $liberal, $democratic, $conservative];
+			var $dataArray = ['<strong>GREEN - </STRONG>A party of social and environment justice, which supports a radical transformation of society for the benefit of all, and for the planet as a whole.',
+												'<strong>LIBERAL - </STRONG>Individual freedom, equality for all, responsibility and  human dignity in the structure of an ethical society.',
+												'<strong>NEW DEMOCRATIC - </STRONG>The pursuit of peace, compassion, democratic socialism and to replace oppression and privilege with democracy and equality.',
+												'<strong>CONSERVATIVE - </STRONG>Developing coalition, respecting traditions yet honouring a concept of Canada as the greater sum of strong parts.'];
+			var $voteStatus = $('#vote-status');
+			function getMaxOfArray(numArray) {
+  			return Math.max.apply(null, numArray);
+			}
+
+			if(!$green && !$liberal && !$democratic && !$conservative) {
+				$('.svg-box').hide();
+				$voteStatus.html('You have not voted so far. Click <a href="comparison.php">here</a> to read the proposals and vote.');
+			} else {
+				$votesWinners = $votesArray.filter(function(el){return el === getMaxOfArray($votesArray);});
+				if($votesWinners.length > 1) {
+					$voteStatus.text('So far it is a draw. Keep on researching and make your decision');
+				} else {
+					let $index = $votesArray.indexOf($votesWinners[0]);
+					$voteStatus.html($dataArray[$index]);
+				}
+			}
+
+
+
 		});
+
+
 
 
 

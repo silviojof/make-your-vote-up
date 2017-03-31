@@ -12,11 +12,15 @@
 .site-nav img {
     max-height:calcRem(50px);
     padding-left: 2rem;
+    @media screen and (max-width: map-get($breakpoints, medium)) {
+      padding: 0.3rem;
+    }
+
 }
 
 
 #site-menu {
-  position: relative; 
+  position: relative;
   i {
     color: $dark-grey;
     font-size: 1.8rem;
@@ -121,6 +125,6 @@
     background-color:$mid-green;
 }
 
-.new-democratic {
+.newdemocratic {
     background-color:$mid-orange;
 }

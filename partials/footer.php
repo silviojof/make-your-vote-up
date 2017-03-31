@@ -16,7 +16,7 @@
   <div class="vote-modal-box">
     <i class="fa fa-times modal-close" aria-hidden="true"></i>
     <h2>Vote Status</h2>
-    <p>Based on your analysis and votes on each topic, that is your preferences:</p>
+    <p id="vote-status"></p>
     <div class="svg-box">
     <div class="party-tag">
       <span>G</span>

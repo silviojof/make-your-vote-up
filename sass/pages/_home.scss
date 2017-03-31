@@ -46,7 +46,7 @@
         background-image:url("./../img/party-leaders-home/green-homepage.jpg");
     }
 
-    [data-party="new-democratic"] {
+    [data-party="newdemocratic"] {
         background-image:url("./../img/party-leaders-home/ndp-homepage.jpg");
     }
 
@@ -60,7 +60,7 @@
         font-size: 1.5rem;
         font-weight: 600;
     }
-    
+
     [data-party="conservative"]>p:before {
         content:"conservative";
     }
@@ -73,7 +73,7 @@
         content:"green";
     }
 
-    [data-party="new-democratic"]>p:before {
+    [data-party="newdemocratic"]>p:before {
         content:"new democratic";
     }
 }
@@ -122,17 +122,17 @@
 }
 
 @include breakpoint (medium down){
-    
+
     #video-bg {
         position:relative;
         margin-bottom:calcRem(-10px);
     }
-    
+
     #video-bg  video {
         width:100%;
         height:100%;
     }
-    
+
     .parties {
         position:relative;
         bottom:0;
@@ -145,18 +145,18 @@
         top:0;
         left:0;
     }
-    
+
     .parties {
         width:50%;
         top:0;
         right:0;
         z-index:-1;
     }
-    
+
     .party {
         height:100%;
     }
-    
+
     .h-footer{
         position:fixed;
         bottom:0;
@@ -169,7 +169,7 @@
         position:relative;
         padding:0;
     }
-    
+
     .party p {
         position:absolute;
         bottom:0;
@@ -177,11 +177,11 @@
         width:100%;
         padding:calcRem(40px);
     }
-    
+
     #video-bg {
         height:calcRem(600px);
     }
-    
+
     #video-bg video {
         height:100%;
         width:auto;
@@ -192,11 +192,11 @@
     .page-header h1{
        font-size:2.5rem;
     }
-    
+
     #video-bg {
         height:calcRem(500px);
     }
-    
+
     #video-bg video {
         height:100%;
         width:auto;

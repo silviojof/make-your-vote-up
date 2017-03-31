@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     //randomnize
 
-    var classes = ["conservative", "liberal", "green", "new-democratic"];
+    var classes = ["conservative", "liberal", "green", "newdemocratic"];
 
     for (var i = 0; i < classes.length; i += 1) {
 
@@ -30,16 +30,17 @@ $(document).ready(function(){
             var randomNumber = Math.floor(Math.random()*classes.length);
         }
 
-        $(".party").filter(':eq('+i+'), :eq('+(i+4)+')').addClass(classes[randomNumber]);
+        $(".party").filter(':eq('+i+'), :eq('+(i+4)+')').addClass(classes[randomNumber]).parent('a').attr('href', "party.php?party=" + classes[randomNumber]);
         $(".party").eq(i+4).attr('data-party', classes[randomNumber]);
         $(".party>p").eq(i).addClass($(".party>p").eq(i).parent().attr('data-party'));
+
     }
 
 
     $(".conservative").eq(0).html('<a href="party.php?party=conservative">conservative</a>');
     $(".liberal").eq(0).html('<a href="party.php?party=liberal">liberal</a>');
     $(".green").eq(0).html('<a href="party.php?party=green">green</a>');
-    $(".new-democratic").eq(0).html('<a href="party.php?party=newdemocratic">new democratic</a>');
+    $(".newdemocratic").eq(0).html('<a href="party.php?party=newdemocratic">new democratic</a>');
 
     //
 

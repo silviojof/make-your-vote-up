@@ -20,16 +20,16 @@
                 </video>
             </div>
             <div class="parties">
-                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
-                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
-                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
-                <div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div>
+                <a><div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div></a>
+                <a><div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div></a>
+                <a><div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div></a>
+                <a><div class="large-3 medium-6 small-12 columns party p-img" data-party=""><p></p></div></a>
             </div>
-        
+
         <div class="h-footer">
             <?php include('partials/footer.php'); ?>
         </div>
-        
+
         <script type="text/javascript" src="js/video.js"></script>
         <!-- hola -->
 
